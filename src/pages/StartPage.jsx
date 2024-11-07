@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { StartContainer } from '../assets/styles/pages/StartPagestyles';
+import { StartContainer } from './styles/pages/StartPagestyles';
 
 
 function StartPage() {
