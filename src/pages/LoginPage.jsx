@@ -1,13 +1,13 @@
  
 import { useNavigate } from 'react-router-dom';
-import { LoginBackground } from '../assets/styles/pages/LoginPagestyle';
+import { LoginBackground } from '../style/LoginPagestyle';
 
 
 function LoginPage() {
   const navigate = useNavigate();
 
   const goToHomePage = () => {
-    navigate('/HomePage');
+    navigate('/MainPage');
   };
 
   return (
