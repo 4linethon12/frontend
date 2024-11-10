@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/User/LoginPage';
 import Enter from '../pages/User/Enter';
+import Password from '../pages/Join/Password';
 
 function AppRouter() {
   return (
