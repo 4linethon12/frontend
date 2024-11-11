@@ -10,9 +10,9 @@ function LoginPage() {
 
   return (
     <div className='login_wrap'>
-      <span className='logo' />
+      <span className='logosanta' />
       <div className='nickname'>
-        <p>닉네임</p>
+        <p className='ntext' >닉네임</p>
         <div>
           <input
               type='text'
@@ -22,7 +22,7 @@ function LoginPage() {
         </div>
       </div>
     <div className='password'>
-        <p>비밀번호</p>
+        <p className='ntext'>비밀번호</p>
         <div>
             <input
                 type='password'
@@ -31,7 +31,7 @@ function LoginPage() {
             />  
         </div>
     </div>
-    <button className='login' onClick={goToHomePage}>로그인</button>
+    <button className='gotologin' onClick={goToHomePage}>로그인</button>
     </div>
   );
 }

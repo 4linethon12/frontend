@@ -1,0 +1,84 @@
+.join_wrap {
+    background: linear-gradient(0deg, #0C1929 0%, #184E40 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh; 
+}
+
+.join_header {
+    position: relative;
+    top: -170px;
+}
+
+.hi {
+    color: #ffffff;
+    font-family: SUITE;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.hib {
+    color: #ffffff;
+    font-family: SUITE;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: -20px;
+}
+
+.alert {
+    display: flex;
+    justify-content: space-between;
+}
+
+.join_text {
+    color: #7B9F99;
+    font-family: SUITE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.join_alert {
+    color: #7B9F99;
+    font-family: SUITE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.next_button {
+    width: 326px;
+    height: 52px;
+    background-color: #CFD3D5;
+    color: #B2AEAE;
+    border-radius: 20px;
+    font-family: SUITE;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    position: relative;
+    top: 170px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; /* .top 컨테이너를 화면의 위쪽에 고정 */
+    top: 20px; /* 상단으로부터의 거리 */
+    left: 20px; /* 왼쪽 여백 */
+    right: 20px; /* 오른쪽 여백 */
+    width: calc(100% - 40px); /* 좌우 여백을 제외한 100% 너비 */
+    z-index: 1000;
+}
+
+.back, .cancel {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
