@@ -1,0 +1,37 @@
+.login_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/HomeBackground.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 100vh; 
+  }  
+  
+  .logo {
+    background-image: url('../img/enter/loginsanta.png');
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+  }
+
+  .login {
+    padding: 10px 20px;
+    width: 500px;
+    height: 80px;
+    font-size: 24px;
+    background-color: #8F1426;
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-top: 150px;
+  }
+  
+  .login:hover {
+    background-color: #AC4655;
+  }
+

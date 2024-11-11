@@ -1,0 +1,67 @@
+.enter_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/HomeBackground.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 100vh; 
+  }
+  
+  .logo {
+    background-image: url('../img/enter/Logo.svg');
+    background-size: cover;
+    width: 500px;
+    height: 100px;
+  }
+  
+  .santa {
+    background-image: url('../img/enter/Logo1.png');
+    background-size: cover;
+    margin-top: 80px;
+    width: 380px;
+    height: 380px;
+  }
+  
+  .start {
+    padding: 10px 20px;
+    width: 500px;
+    height: 80px;
+    font-size: 24px;
+    background-color: #8F1426;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    margin-top: 150px;
+  }
+  
+  .start:hover {
+    background-color: #AC4655;
+  }
+  
+  .section {
+    margin-top: 20px;
+    display: flex;
+  }
+
+  .notice {
+    color: rgb(255, 255, 255);
+
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .login {
+    color: #AC4655;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .login:hover {
+    text-decoration: underline;
+  }
+  
