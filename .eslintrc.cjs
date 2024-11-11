@@ -21,6 +21,7 @@ module.exports = {
     rules: {
       "prettier/prettier": ["error"],
       "react/react-in-jsx-scope": "off",
+      "no-unused-vars": ["error", { "varsIgnorePattern": "React" }],
     },
   };
   

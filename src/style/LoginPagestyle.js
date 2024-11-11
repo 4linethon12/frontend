@@ -5,9 +5,10 @@ width: 100vw;
   min-height: 100vh; 
   overflow: hidden;
   background: linear-gradient(
-    180deg,
+    0deg,
     #0c1929 0%,
     #184e40 100%
+    
   );
   display: flex;
   justify-content: center;
