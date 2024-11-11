@@ -4,6 +4,7 @@ import LoginPage from '../pages/User/LoginPage';
 import Enter from '../pages/User/Enter';
 import Password from '../pages/Join/Password';
 import Join from '../pages/Join/Join';
+import JoinDone from '../pages/Join/JoinDone';
 
 function AppRouter() {
   return (
@@ -15,6 +16,7 @@ function AppRouter() {
         <Route path="/HomePage" element={<HomePage />} />
         <Route path="/join" element={<Join />} />
         <Route path="/password" element={<Password />} />
+        <Route path="/done" element={<JoinDone />} />
       </Routes>
     </Router>
   );
