@@ -17,7 +17,7 @@ const BeforeTree = () => {
           <style.TitleText4>산타의 마니또 트리</style.TitleText4>
         </style.RowContainer2>
         <style.CenteredImage src={treeImage} alt="Tree Image" />
-        <Button onClick={handleClick} marginTop="60%">
+        <Button  onClick={handleClick} marginTop="60%">
           확인
         </Button>
         </style.EmptyContainer>

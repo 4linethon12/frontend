@@ -6,6 +6,7 @@ import * as style from '../../style/ManittoPage/MakeGroupPage';
 import Input from '../../component/manittoo/Input'; // Input 컴포넌트 import
 import Button from '../../component/manittoo/Button';
 import { useNavigate } from 'react-router-dom';
+import chervon from '/images/Mission/x.png';
 
 
 const JoinGroupPage = () => {
@@ -24,6 +25,10 @@ const JoinGroupPage = () => {
     return (
         <styles.MainBackground>
             <style.highContainer>
+            <style.CenteredImage src={chervon} alt="chervon"
+            onClick={handleClick}
+            style={{ cursor: 'pointer' }}  />
+
                 <style.ProgressBarContainer>
                     <style.ProgressBarFill style={{ width: `${progress}%` }} />
                 </style.ProgressBarContainer>
@@ -41,7 +46,7 @@ const JoinGroupPage = () => {
                     value={groupName} 
                     onChange={handleGroupNameChange} 
                 />
-                 <style.TitleText3 margin="10px">입장 코드 입력</style.TitleText3>
+                  
 
                  <Button onClick={handleClick}marginTop="100%">다음</Button>
             </style.EmptyContainer>

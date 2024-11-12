@@ -1,6 +1,6 @@
  import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
-import LoginPage from '../pages/LoginPage';
+import LoginPage from '../pages/User/LoginPage'
 import Mainpage from '../pages/manittoo/Mainpage3.1';
 import MakeGroup from '../pages/manittoo/MakeGroupPage3.2';
 import MakeMission from '../pages/manittoo/MakeMissionPage3.3';
@@ -15,13 +15,16 @@ import Letter from '../pages/Tree/Letter4.3';
 import Letterwirte   from '../pages/Tree/Letterwirte';
 import BeforeTree from '../pages/Tree/BeforeTree4.4';
 import WriteHintPages from '../pages/Tree/WriteHint4.5';
+import Mainpage2 from '../pages/manittoo/Mainpage3.1.1';
+import Join from '../pages/Join/Join';
+import Password from '../pages/Join/Password';
 
 function AppRouter() {
   return (
     <Router>
       <Routes>
          <Route path="/" element={<Mainpage />} />
-        <Route path="/login" element={<LoginPage />} />
+         <Route path="/LoginPage" element={<LoginPage />} />
         <Route path="/HomePage" element={<HomePage />} />
         <Route path="/MainPage" element={<Mainpage />} />
         <Route path="/MakeGroup" element={<MakeGroup />} />
@@ -38,6 +41,10 @@ function AppRouter() {
         <Route path="/Letterwirte" element={<Letterwirte />} />
         <Route path="/BeforeTree" element={<BeforeTree />} />
         <Route path="/WriteHintPages" element={<WriteHintPages />} />
+        <Route path="/Mainpage2" element={<Mainpage2 />} />
+        <Route path="/Join" element={<Join />} />
+   
+        <Route path="/password" element={<Password />} />
       </Routes>
     </Router>
   );
