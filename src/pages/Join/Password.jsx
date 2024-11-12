@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import back from '../../assets/img/join/left.svg'
 import cancel from '../../assets/img/join/x.svg'

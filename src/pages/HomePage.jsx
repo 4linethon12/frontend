@@ -1,4 +1,4 @@
-import { HomeContainer } from "../assets/styles/pages/HomePagestyles";
+import { HomeContainer } from "../style/HomePagestyles";
 
 
  
