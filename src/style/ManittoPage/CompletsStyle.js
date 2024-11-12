@@ -5,20 +5,17 @@ export const StyledDiv = styled.div`
 `;
 
 export const MainBackground = styled.div`
- width: 100%;
-  min-height: 100vh; 
-  overflow: hidden;
-  background: linear-gradient(
-    0deg,
-    #0c1929 0%,
-    #184e40 100%
-    
-  );
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-   
+background-image: url('/images/mainpage/MainBack.svg');
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ width: 100vw;
+ min-height: 100vh;  
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+
 `;
 
 export const TitleText = styled.h1`

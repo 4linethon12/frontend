@@ -8,7 +8,7 @@ const TreeManito = () => {
       <style.EmptyContainer>
         <style.RowContainer1>
           <style.CenteredImage2 src={LogoImage} alt="LogoImage"  ></style.CenteredImage2>
-          <style.TitleText>나의 마니또 트리보러가기</style.TitleText>
+          <style.TitleText>메인으로 돌아가기</style.TitleText>
         </style.RowContainer1>
         <style.RowContainer2>
           <style.TitleText3>황민영</style.TitleText3>

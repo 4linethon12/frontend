@@ -56,6 +56,7 @@ export const TitleText = styled.h1`
   font-size: 12px;
   color: white;
   margin-top: 5%;
+  margin-left: 10%;
 `;
 export const TitleText2 = styled.h1`
   font-family: "CAFE24";
@@ -104,6 +105,6 @@ export const CenteredImage = styled.img`
   width: 300px; /* 필요한 크기로 조정 */
   height: 410px;
   
-  margin: 0 auto; /* 가로 중앙 정렬 */
-  padding: 20px 0; /* 필요한 여백으로 조정 */
+   
+   
 `;
