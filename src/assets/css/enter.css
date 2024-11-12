@@ -12,31 +12,35 @@
   }
   
   .logo {
-    background-image: url('../img/enter/Logo.svg');
+    background-image: url('../img/enter/Logo.png');
     background-size: cover;
-    width: 500px;
-    height: 100px;
+    position: absolute;
+    top: 130px;
+    width: 297px;
+    height: 70px;
   }
   
   .santa {
     background-image: url('../img/enter/Logo1.png');
     background-size: cover;
-    margin-top: 80px;
-    width: 380px;
-    height: 380px;
+    position: absolute;
+    top: 230px;
+    width: 250px;
+    height: 250px;
   }
   
   .start {
     padding: 10px 20px;
-    width: 500px;
-    height: 80px;
-    font-size: 24px;
+    width: 297px;
+    height: 53px;
+    font-size: 16px;
     background-color: #8F1426;
     border: none;
     border-radius: 50px;
     color: white;
     cursor: pointer;
-    margin-top: 150px;
+    position: relative;
+    top: 270px;
   }
   
   .start:hover {
@@ -44,24 +48,24 @@
   }
   
   .section {
-    margin-top: 20px;
     display: flex;
+    position: relative;
+    top: 270px;
   }
 
   .notice {
     color: rgb(255, 255, 255);
-
     margin-right: 10px;
-    font-size: 18px;
+    font-size: 12px;
   }
   
   .login {
     color: #AC4655;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 12px;
   }
   
   .login:hover {
-    text-decoration: underline;
+    cursor: pointer;
   }
   

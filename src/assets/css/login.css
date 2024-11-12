@@ -3,30 +3,74 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('/images/HomeBackground.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #151723;
     width: 100vw;
     min-height: 100vh; 
   }  
   
-  .logo {
+  .logosanta {
     background-image: url('../img/enter/loginsanta.png');
     background-size: cover;
-    width: 500px;
-    height: 500px;
+    width: 245px;
+    height: 245px;
+    position: relative;
+    top: 50px;
   }
 
-  .login {
-    padding: 10px 20px;
-    width: 500px;
-    height: 80px;
-    font-size: 24px;
+  .nickname {
+    position: relative;
+    top: 80px;
+  }
+
+  .password {
+    position: relative;
+    top: 80px;
+  }
+
+  .ntext {
+    display: flex;
+    height: 13px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    font-family: SUITE;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    color: #ffffff;
+  }
+
+  .id, .pw {
+    background-color: white;
+    border: 1px solid #E7E8EB;
+    color: #DCDCDC;
+    width: 304px;
+    height: 51px;
+    border-radius: 20px;
+    padding-left: 13px;
+  }
+
+  .id:not(:placeholder-shown), .pw:not(:placeholder-shown) {
+    color: #121212; /* 입력 중 또는 값이 있을 때 텍스트 색상 */
+}
+
+/* 플레이스홀더 스타일 */
+.id::placeholder, .pw::placeholder {
+   color: #DCDCDC; /* 플레이스홀더 텍스트 색상 */
+}
+  
+  .gotologin {
+    padding: 18px;
+    width: 326px;
+    height: 51px;
+    font-family: SUITE;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
     background-color: #8F1426;
     border: none;
-    border-radius: 50px;
-    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    color: #DCDCDC;
     cursor: pointer;
     margin-top: 150px;
   }

@@ -26,6 +26,7 @@ const LoginPage = () => {
   };
 
   return (
+ 
     <style.LoginBackground>
       <style.CenteredImage src={LogoImage} alt="LogoImage" />
       <style.SantaImage src={SantaSvg} alt="SantaImage" />
@@ -46,6 +47,7 @@ const LoginPage = () => {
         <style.StyledButton onClick={handleClick}>로그인</style.StyledButton>
       </style.EmptyContainer>
     </style.LoginBackground>
+ 
   );
 };
 
