@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import back from '../../assets/img/join/left.svg';
 import cancel from '../../assets/img/join/x.svg';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Eye from '../../assets/img/join/eye.svg';
 import Noneye from '../../assets/img/join/noneeye.svg';
 import IconCheck from '../../assets/img/join/circlecheck.svg';
 import IconX from '../../assets/img/join/circlex.svg';
+import { join } from '../../api/registerauth';
+
 
 const Password = () => {
   const [password, setPassword] = useState('');
@@ -18,6 +20,8 @@ const Password = () => {
   const [isValid, setIsValid] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  const nickname = location.state?.nickname;
 
   // 비밀번호 입력 처리
   const handleChange = (e) => {
@@ -50,6 +54,17 @@ const Password = () => {
   // 포커스 상태 업데이트
   const handleFocus = () => setIsFocused(true);
   const handleBlur = () => setIsFocused(false);
+
+  const handleRegister = async () => {
+    try {
+      if (nickname && isValid) {
+        await join(nickname, password);
+        navigate('/done');
+      }
+    } catch (error) {
+      console.error('회원가입 오류:', error);
+    }
+  };
 
   return (
     <div className="join_wrap">
@@ -95,7 +110,7 @@ const Password = () => {
           color: password ? '#DCDCDC' : '#B2AEAE',
           cursor: password ? 'pointer' : 'not-allowed',
         }}
-        onClick={() => navigate('/done')}
+        onClick={handleRegister}
         disabled={!password}
       >
         다음

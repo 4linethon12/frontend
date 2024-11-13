@@ -1,5 +1,4 @@
- 
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import '../../assets/css/join.css'
 import back from '../../assets/img/join/left.svg'
 import cancel from '../../assets/img/join/x.svg'
@@ -35,9 +34,9 @@ const Join = () => {
     navigate('/enter');
   };
   
-  const goTOPassword = () => {
-    navigate('/password')
-  }
+  const goToPassword = () => {
+    navigate('/password', { state: { nickname } });
+  };
 
   return (
     <div className="join_wrap">
@@ -66,7 +65,7 @@ const Join = () => {
         color: nickname ? 'DCDCDC' : '#B2AEAE', // 버튼 글자
         cursor: nickname ? 'pointer' : 'not-allowed', // 입력이 없으면 클릭 비활성화
       }}
-      onClick={goTOPassword}
+      onClick={goToPassword}
       >다음</button>
     </div>
   );

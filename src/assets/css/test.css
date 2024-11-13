@@ -334,3 +334,15 @@
     line-height: normal;
 
   }
+
+  .santapresent {
+    display: flex;
+    width: 65.778px;
+  height: 64px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    position: absolute;
+    top: 635px;
+    left: 283px;
+  }

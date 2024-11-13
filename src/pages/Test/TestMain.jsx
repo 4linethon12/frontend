@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import AllText from './js/text';
 import cancel from '../../assets/img/join/x.svg';
 import '../../assets/css/test.css'
+import santapresent from '../../assets/img/test/Logo1.png'
 
 const TestMain = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -69,7 +70,8 @@ const TestMain = () => {
           </button>
         ))}
       </div>
-
+      
+      <img src={santapresent} className='santapresent' />
       <button 
         onClick={handleNext} 
         className={`next_btn ${selectedChoice !== null ? 'active' : 'inactive'}`}

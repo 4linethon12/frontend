@@ -1,7 +1,14 @@
 import React from 'react'
 import santa from '../../assets/img/join/santa.png'
+import { useNavigate } from 'react-router-dom';
+
 
 const JoinDone = () => {
+  const navigate = useNavigate();
+  
+  const goToMainPage = () => {
+    navigate('/MainPage');
+  };
 
   return (
     <div className='done_wrap'>
@@ -10,7 +17,7 @@ const JoinDone = () => {
 
         <img src={santa} className='donepic' />
         
-        <button className='next_button'>크리스마또 시작하기</button>
+        <button className='next_button' onClick={goToMainPage}>크리스마또 시작하기</button>
         
     </div>
   )

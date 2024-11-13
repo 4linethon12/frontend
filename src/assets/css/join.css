@@ -27,6 +27,17 @@
     width: 304px;
 }
 
+.hi_re {
+    color: #ffffff;
+    font-family: SUITE;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 35px; /* 145.833% */
+    margin-top: 62px;
+    width: 304px;
+}
+
 .single_can {
     display: flex;
     height: 50px;
