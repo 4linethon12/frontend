@@ -1,3 +1,4 @@
+// LoginPage.js
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import * as style from '../../style/LoginPagestyle';
@@ -6,19 +7,24 @@ import SantaSvg from '/images/Login/SantaImage.png';
 import Input from '../../component/manittoo/Input';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../api/auth';
+import { useDispatch } from 'react-redux';
+import { setNickname } from '../../redux/userSlice';
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const [nickname, setNickname] = useState('');
+  const dispatch = useDispatch();
+  const [nickname, setNicknameLocal] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleNicknameChange = (e) => setNickname(e.target.value);
+  const handleNicknameChange = (e) => setNicknameLocal(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
 
   const handleClick = async () => {
     try {
-      await login(nickname, password); // nickname과 password를 서버로 전송
-      navigate('/Mainpage'); // 로그인 성공 시 메인 페이지로 이동
+      await login(nickname, password); // 서버에 로그인 요청
+      dispatch(setNickname(nickname)); // Redux에 닉네임 저장
+      localStorage.setItem('nickname', nickname); // 닉네임을 로컬 스토리지에도 저장
+      navigate('/Mainpage'); // 메인 페이지로 이동
     // eslint-disable-next-line no-unused-vars
     } catch (error) {
       alert('로그인 실패: 아이디 또는 비밀번호를 확인하세요');

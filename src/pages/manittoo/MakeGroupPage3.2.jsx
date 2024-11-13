@@ -1,4 +1,4 @@
-// 필요한 모듈 import
+// MakeGroupPage.js
 import { useState } from 'react';
 import * as styles from '../../style/ManittoPage/BackGround';
 import * as style from '../../style/ManittoPage/MakeGroupPage';
@@ -6,25 +6,29 @@ import Input from '../../component/manittoo/Input';
 import Button from '../../component/manittoo/Button';
 import { useNavigate } from 'react-router-dom';
 import CloseImage from '/images/Group/x.png';
-import { useDispatch } from 'react-redux';
-
+ 
 const MakeGroupPage = () => {
     const [progress] = useState(50);
-    const [groupName, setGroupName] = useState(''); // 그룹 이름 상태 추가
+    const [groupName, setGroupNameLocal] = useState('');
     const navigate = useNavigate();
-    const dispatch = useDispatch();
+    
 
+   
     const handleNextClick = () => {
-        dispatch(setGroupName(groupName)); // Redux에 그룹 이름 저장
+        if (groupName.trim() === "") {
+            alert("그룹 이름을 입력해 주세요.");
+            return;
+        }
+        localStorage.setItem('groupName', groupName); // 그룹 이름을 로컬 스토리지에 저장
         navigate('/MakeMission'); // 다음 페이지로 이동
     };
 
     const handleClickClose = () => {
-        navigate('/MainPage'); // 메인 페이지로 이동
+        navigate('/MainPage');
     };
 
     const handleGroupNameChange = (event) => {
-        setGroupName(event.target.value);
+        setGroupNameLocal(event.target.value);
     };
 
     return (

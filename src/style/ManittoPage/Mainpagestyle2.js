@@ -77,19 +77,18 @@ export const MiniContainer = styled.div`
 
 export const RowContainer = styled.div`
   display: flex;
-  gap: 1rem; /* 텍스트 간격 */
+  gap: 15px;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
+ 
 `;
 
 export const RowContainer2 = styled.div`
   display: flex;
-  gap: 1rem; /* 텍스트 간격 */
+  gap: 37px;
   justify-content: center;
   align-items: center;
-  
+  margin-top: 5%;
 `;
 
 export const CenteredImage = styled.img`
@@ -98,7 +97,12 @@ export const CenteredImage = styled.img`
   
  
 `;
-
+export const LogoImage = styled.img`
+  width: 25px; /* 필요한 크기로 조정 */
+  height: 25px;
+  
+ 
+`;
 export const LeftImage = styled.img`
   width: 50px; /* 필요한 크기로 조정 */
   height: 60px;
@@ -106,6 +110,12 @@ export const LeftImage = styled.img`
  
 `;
 
+export const SantaImage = styled.img`
+  width: 50px; /* 필요한 크기로 조정 */
+  height: 50px;
+  margin-bottom: 5%;
+ 
+`;
 export const Image2 = styled.img`
   width: 50px; /* 이미지 크기 조절 */
   height: 50px;
@@ -135,7 +145,7 @@ export const SantaContainer = styled.div`
 export const Divider = styled.hr`
   border: none;
   border-top: 1px solid #ccc;
-  margin-top: 5%;
+   
   width: 90%;
   opacity: 0.3;
 `;
@@ -243,19 +253,77 @@ export const BadgeText = styled.div`
   font-weight: 600;
   text-align: center;
 `;
+export const RowContainerText = styled.div`
+  color: #254434;
+  font-size: 14px;
+  font-family: 'SUITE';
+  font-weight: 600;
+  overflow: hidden;
+`;
+export const RowContainerText2 = styled.div`
+  color: #254434;
+  font-size: 10px;
+  font-family: 'SUITE';
+  font-weight: 400;
+  text-overflow: ellipsis;
+   margin-right: 5%;
+  display: flex;
+  margin-top: 10%;
+  align-self: flex-end; 
+`;
 
 export const DragScrollContainer = styled(ScrollContainer)`
   display: flex;
   width: 100%;
   height: 30vh;
   overflow-x: auto;
+  justify-content: center;
 `;
 
 export const Item = styled.div`
   min-width: 140px;
   height: 140px;
-  background-color: #f0f0f0;
-  
+  background-color: #CFD3D5;
+  display: flex;
   border-radius: 8px;
   margin-left:10%;
+`;
+export const Item2= styled.div`
+  min-width: 140px;
+  height: 140px;
+  background-color: #CFD3D5;
+  
+  border-radius: 8px;
+  margin-left:5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const BadgeContainer2 = styled.div`
+  width: 80px;
+  height:30px;
+  background: rgba(143, 20, 38, 0.80);
+  border-radius: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const BadgeContainer3 = styled.div`
+  width: 124px;
+  height:60px;
+  background: rgba(255, 253, 253, 0.80);
+  border-radius: 10px;
+  margin-top: 10%;
+ 
+`;
+
+export const BadgeText2 = styled.div`
+  color: white;
+  font-size: 12px;
+  font-family: 'SUITE';
+  font-weight: 600;
+  text-align: center;
 `;

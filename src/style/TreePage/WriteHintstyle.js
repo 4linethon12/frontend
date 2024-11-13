@@ -29,6 +29,24 @@ export const TitleText = styled.h1`
   margin-top: ${(props) => props.marginTop || '0'};
 `;
 
+export const StyledButton = styled.button`
+   
+  width: 300px;
+  height: 52px;
+ 
+  color: #B2AEAE;
+  font-size: 16px;
+  font-family: 'SUITE', sans-serif;
+  font-weight: 700px;
+  background-color: #CFD3D5;
+  text-align: center;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 186px;
+ 
+`;
 
 
 export const Container = styled.div`
@@ -44,13 +62,35 @@ export const Container = styled.div`
   box-sizing: border-box;
   margin-top: 10%; /* 숫자일 경우 px 추가 */
 `;
-
-export const ContainerText = styled.p`
+export const HintInput = styled.input`
+  width: 100%;
+  height: 60px;
+  border: none;
+  background: transparent;
   font-family: 'SUITE', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   color: #254434;
-  font-weight: bold;
-   
+  outline: none;
+  font-weight: 600;
+
+  /* 사용자 입력 시 스타일 */
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const HintText = styled.span`
+  position: absolute;
+  color: #7B9F99;
+  font-size: 14px;
+  font-family: 'SUITE', sans-serif;
+  pointer-events: none;
+  opacity: ${(props) => (props.isFocused ? 0 : 1)};
+  transition: opacity 0.3s;
+  line-height: 30px; 
+  white-space: pre-line;
+  
+  text-align: center; /* 텍스트 중앙 정렬 */
 `;
 
 export const ContainerImage = styled.img`

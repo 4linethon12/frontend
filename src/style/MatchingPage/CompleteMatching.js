@@ -28,6 +28,13 @@ export const TitleText = styled.h1`
   color: white;
   margin-top: ${(props) => props.marginTop || '0'};
 `;
+export const TitleText4 = styled.h1`
+  font-family: "SUITE", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #7B9F99;
+  
+`;
 
 
 export const TitleText2 = styled.h1`

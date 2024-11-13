@@ -9,6 +9,7 @@ import BallImage from '/images/mainpage/Christmas Snow Globe.png';
 import RightImage from '/images/mainpage/chevron-right.png'; 
 import Santaman from '/images/santa.png'; 
 import Santgairl from '/images/santa3.png'; 
+import { useEffect, useState } from 'react';
 
 
 const Mainpage = () => {
@@ -23,6 +24,15 @@ const Mainpage = () => {
     navigate2('/JoinGroupPage');
   };
 
+  const [nickname, setNickname] = useState('');
+
+  useEffect(() => {
+    const storedNickname = localStorage.getItem('nickname');
+    if (storedNickname) {
+      setNickname(storedNickname);
+    }
+  }, []);
+
   const handleNavigateTree = () => {
     navigate('/TreeManito'); // Update this path to your desired destination
   };
@@ -32,7 +42,7 @@ const Mainpage = () => {
         <styles.RowContainer>
         <styles.CenteredImage src={LogoImage} alt="LogoImage" />
            
-          <styles.TitleText onClick={handleNavigateTree} style={{ cursor: 'pointer' }}>나의 모니또 트리보러가기</styles.TitleText>
+          <styles.TitleText onClick={handleNavigateTree} style={{ cursor: 'pointer' }}>나의 트리 보러가기</styles.TitleText>
         </styles.RowContainer>
 
          
@@ -71,7 +81,7 @@ const Mainpage = () => {
 
       <styles.Divider />
       <styles.RowContainer2>
-      <styles.TitleText3>고승범 산타의 마니또</styles.TitleText3>
+       <styles.TitleText3>{nickname ? `${nickname} 산타의 마니또` : '산타의 마니또'}</styles.TitleText3>
      < CountdownBadge/>
      
      </styles.RowContainer2>
