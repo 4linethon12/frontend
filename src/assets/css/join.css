@@ -78,13 +78,6 @@
     font-size: 16px;
 }
 
-.eye {
-    position: absolute;
-    top: 225px;
-    right: 50px;
-    z-index: 1000;
-}
-
 .join_alert {
     color: #7B9F99;
     font-family: SUITE;
