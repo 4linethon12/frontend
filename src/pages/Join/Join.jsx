@@ -20,7 +20,7 @@ const Join = () => {
     
 
     // 닉네임에 이모지나 특수문자가 포함되었는지 체크
-    if (/[^a-zA-Z0-9]/.test(value)) {
+    if (/[^a-zA-Z0-9가-힣ㄱ-ㅎㅏ-ㅣ]/.test(value)) {
       setMessage('이모지, 특수문자를 사용할 수 없어요.');
     } else if (value.length > 8) {
       setMessage('8자 이하로 입력해주세요.');
