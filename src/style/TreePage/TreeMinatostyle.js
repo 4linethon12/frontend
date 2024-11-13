@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+
 export const MainContainer = styled.div`
  background-image: url('/images/background/treemainto.svg');
   background-size: cover;
@@ -11,6 +13,7 @@ export const MainContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  min-height: calc(100vh - 50px);
 
 `;
 
@@ -21,7 +24,7 @@ export const EmptyContainer = styled.div`
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
   border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
   border-radius: 8px;
-  margin: 1rem 0;
+   
   display: flex;
   flex-direction: column;
   
@@ -43,7 +46,7 @@ export const RowContainer1 = styled.div`
 export const RowContainer2 = styled.div`
   display: flex;
   gap: 1rem; /* 텍스트 간격 */
-  margin-top: 5%;
+  
   align-items: start;
 `;
 
@@ -80,6 +83,14 @@ export const TitleText4 = styled.h1`
   font-size: 20px;
   color: white;
   
+`;
+export const TitleText5 = styled.h1`
+  font-family: "SUITE", sans-serif;
+  font-weight: bold; /* Weight */
+  font-size: 12px;
+  color: #7B9F99;
+  margin-top: 4%;
+  margin-bottom: 2%;
 `;
 
 

@@ -32,7 +32,7 @@ const Text = styled.p`
 const FriendContainer = ({ text1,  margin, onClick }) => {
   return (
     <Container margin={margin} onClick={onClick}>
-         <ContainerImage src="public/images/마니또.png" alt="산타이미지" />
+         <ContainerImage src="public/images/Group/Logo.png" alt="산타이미지" />
       <Text>{text1}</Text>
        
     </Container>

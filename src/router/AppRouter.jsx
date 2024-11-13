@@ -41,7 +41,7 @@ function AppRouter() {
         <Route path="/BeforeMatching" element={<BeforeMatching />} />
         <Route path="/ProcessMatching" element={<ProcessMatching />} />
         <Route path="/CompleteMatching" element={<CompleteMatching />} />
-        <Route path="/CompleteMatching" element={<CompleteMatching />} />
+       
         <Route path="/FinalOpenPage" element={<FinalOpenPage />} />
         <Route path="/TreeManito" element={<TreeManito />} />
         <Route path="/Letter" element={<Letter />} />
