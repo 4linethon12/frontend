@@ -1,19 +1,23 @@
 import React from 'react'
-import santa from '../../assets/img/enter/santa.svg'
+import santa from '../../assets/img/join/santa.png'
+import { useNavigate } from 'react-router-dom';
+
 
 const JoinDone = () => {
+  const navigate = useNavigate();
+  
+  const goToMainPage = () => {
+    navigate('/MainPage');
+  };
 
   return (
-    <div className='join_warp'>
-        <p className='hi'>환영해요👋</p>
-        <div className='welcome'>
-            <p>이제부터 크리스마또와 함께</p>
-            <p>재미있고 특별한 크리스마스 보내요!</p>
-        </div>
+    <div className='done_wrap'>
+        <p className='hi_re'>환영해요👋</p>
+        <p className='welcome'>이제부터 크리스마또와 함께 <br/> 재미있고 특별한 크리스마스 보내요!</p>
 
-        <span className='snow'><img src={santa} /></span>
+        <img src={santa} className='donepic' />
         
-        <button className='next_button'>크리스마또 시작하기</button>
+        <button className='next_button' onClick={goToMainPage}>크리스마또 시작하기</button>
         
     </div>
   )

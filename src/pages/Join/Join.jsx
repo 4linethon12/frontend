@@ -1,5 +1,4 @@
- 
-import React, { useState } from 'react';
+ import React, { useState } from 'react';
 import '../../assets/css/join.css'
 import back from '../../assets/img/join/left.svg'
 import cancel from '../../assets/img/join/x.svg'
@@ -20,7 +19,7 @@ const Join = () => {
     
 
     // 닉네임에 이모지나 특수문자가 포함되었는지 체크
-    if (/[^a-zA-Z0-9]/.test(value)) {
+    if (/[^a-zA-Z0-9가-힣ㄱ-ㅎㅏ-ㅣ]/.test(value)) {
       setMessage('이모지, 특수문자를 사용할 수 없어요.');
     } else if (value.length > 8) {
       setMessage('8자 이하로 입력해주세요.');
@@ -34,22 +33,18 @@ const Join = () => {
   const goToEnterPage = () => {
     navigate('/enter');
   };
-
-  const handleBackClick = () => {
-    navigate(-1); 
+  
+  const goToPassword = () => {
+    navigate('/password', { state: { nickname } });
   };
-
 
   return (
     <div className="join_wrap">
-      <div className='top'>
-            <div className='back' onClick={handleBackClick}><img src={back} /></div>
-            <div className='cancel' onClick={goToEnterPage}><img src={cancel} /></div>
-        </div>
+        <div className='single_can' onClick={goToEnterPage}><img src={cancel} /></div>
 
       <div className='join_header'>
-        <p className='hi'>반가워요!</p>
-        <p className='hib'>어떻게 불러드리면 될까요?</p>
+        <p className='hi'>반가워요! <br/> 어떻게 불러드리면 될까요?</p>
+        
         <p className='join_text'>닉네임</p>
       <input
         type="text"
@@ -70,6 +65,7 @@ const Join = () => {
         color: nickname ? 'DCDCDC' : '#B2AEAE', // 버튼 글자
         cursor: nickname ? 'pointer' : 'not-allowed', // 입력이 없으면 클릭 비활성화
       }}
+      onClick={goToPassword}
       >다음</button>
     </div>
   );

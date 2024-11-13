@@ -31,3 +31,5 @@ const Character = {
         type: '인자한 산타 할아버지'
     }
 }
+
+export default Character

@@ -2,15 +2,18 @@
     background: linear-gradient(0deg, #0C1929 0%, #184E40 100%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100vw;
     min-height: 100vh; 
 }
 
 .join_header {
-    position: absolute;
-    top: 50px;
+    padding: 10px;
+}
+
+.join_header_re {
+
+    padding: 10px;
 }
 
 .hi {
@@ -19,20 +22,36 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
+    line-height: 35px; /* 145.833% */
+    margin-top: 16px;
+    width: 304px;
 }
 
-.hib {
+.hi_re {
     color: #ffffff;
     font-family: SUITE;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    margin-top: -20px;
+    line-height: 35px; /* 145.833% */
+    margin-top: 62px;
+    width: 304px;
 }
+
+.single_can {
+    display: flex;
+    height: 50px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: stretch;
+  }
 
 .alert {
     display: flex;
     justify-content: space-between;
+    margin-top: 13px;
+    width: 304px;
 }
 
 .join_text {
@@ -41,21 +60,49 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
+    margin-top: 33px;
+}
+
+.id {
+    width: 304px;
+    height: 50px;
+    padding: 15px 13px;
+    margin-top: 13px;
+    border-radius: 20px;
+    border: 0;
+    color: #184E40;
+    font-size: 16px;
+}
+
+.id::placeholder, .pw::placeholder {
+    color: #DCDCDC; /* 플레이스홀더 텍스트 색상 */
+ }
+
+.pw {
+    width: 304px;
+    height: 50px;
+    padding: 15px 13px;
+    margin-top: 13px;
+    border-radius: 20px;
+    border: 0;
+    color: #184E40;
+    font-size: 16px;
 }
 
 .join_alert {
     color: #7B9F99;
     font-family: SUITE;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
+    
 }
 
 .next_button {
     width: 326px;
     height: 52px;
-    background-color: #CFD3D5;
-    color: #B2AEAE;
+    background-color: #8F1426CC;
+    color: #DCDCDC;
     border-radius: 20px;
     font-family: SUITE;
     font-size: 16px;
@@ -63,22 +110,52 @@
     font-weight: 700;
     position: absolute;
     bottom: 70px;
+    border: none;
+    margin-top: 220px;
 }
 
 .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute; /* .top 컨테이너를 화면의 위쪽에 고정 */
-    top: 20px; /* 상단으로부터의 거리 */
-    left: 20px; /* 왼쪽 여백 */
-    right: 20px; /* 오른쪽 여백 */
-    width: calc(100% - 40px); /* 좌우 여백을 제외한 100% 너비 */
+    padding: 10px;
     z-index: 1000;
+    width: 100%;
 }
 
 .back, .cancel {
     width: 30px;
     height: 30px;
     cursor: pointer;
+}
+
+.done_wrap {
+    background: url('../img/join/donebackground.svg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 100vh; 
+}
+
+.donepic {
+    width: 186px;
+    height: 181px;
+    flex-shrink: 0;
+    margin-top: 108px;
+}
+
+.welcome {
+    color: #7B9F99;
+    font-family: SUITE;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 187.5% */
+    align-self: stretch;
+    margin-left: 39px;
+    margin-top: 15px;
 }

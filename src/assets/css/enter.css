@@ -1,15 +1,51 @@
+.video-background {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* 화면을 꽉 채우도록 설정 */
+}
+
+.backcolor {
+  background-color: #151723; /* 배경 색상 */
+  width: 100vw;
+  min-height: 100vh;
+  z-index: -1000;
+  position: absolute;
+  opacity: 70%;
+}
+
 .enter_wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url('/images/HomeBackground.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    min-height: 100vh; 
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh; 
+  position: relative;
+  z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* 비디오 위에 컨텐츠를 표시 */
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
   
   .logo {
     background-image: url('../img/enter/Logo.png');
@@ -17,7 +53,7 @@
     position: absolute;
     top: 130px;
     width: 297px;
-    height: 70px;
+    height: 80px;
   }
   
   .santa {
@@ -41,6 +77,11 @@
     cursor: pointer;
     position: relative;
     top: 270px;
+    margin-bottom: 27px;
+    font-family: SUITE;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
   }
   
   .start:hover {
