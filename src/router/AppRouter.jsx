@@ -18,8 +18,12 @@ import WriteHintPages from '../pages/Tree/WriteHint4.5';
 import Mainpage2 from '../pages/manittoo/Mainpage3.1.1';
 import Join from '../pages/Join/Join';
 import Password from '../pages/Join/Password';
-import Join from '../pages/Join/Join';
 import JoinDone from '../pages/Join/JoinDone';
+import TestStart from '../pages/Test/TestStart';
+import TestMain from '../pages/Test/TestMain';
+import TestResult from '../pages/Test/TestResult';
+import Enter from '../pages/User/Enter'
+import TestLoding from '../pages/Test/TestLoding';
 
 function AppRouter() {
   return (
@@ -53,6 +57,11 @@ function AppRouter() {
    
         <Route path="/password" element={<Password />} />
         <Route path="/done" element={<JoinDone />} />
+
+        <Route path="/teststart" element={<TestStart />} />
+        <Route path="/testing" element={<TestMain />} />
+        <Route path="/testresult" element={<TestResult />} />
+        <Route path="/loading" element={<TestLoding />} />
       </Routes>
     </Router>
   );

@@ -36,20 +36,23 @@ const Password = () => {
     navigate(-1); 
   };
 
+  const goToDone = () => {
+    navigate('/done');
+  };
+
   return (
     <div className="join_wrap">
         <div className='top'>
             <div className='back' onClick={handleBackClick}><img src={back} /></div>
             <div className='cancel' onClick={goToEnterPage}><img src={cancel} /></div>
         </div>
-      <div className='join_header'>
-        <p className='hi'>안전한 비밀번호를</p>
-        <p className='hib'>입력해 주세요.</p>
+      <div className='join_header_re'>
+        <p className='hi'>안전한 비밀번호를 <br/> 입력해 주세요.</p>
         <p className='join_text'>비밀번호</p>
         <input
         type="password"
         className="pw"
-        placeholder="8~16자리 영문, 숫자, 특수문자를 입력해주세요."
+        placeholder="8~16자리 영문, 숫자, 특수문자"
         value={password}
         onChange={handleChange}
       />
@@ -65,6 +68,8 @@ const Password = () => {
         color: password ? 'DCDCDC' : '#B2AEAE', // 버튼 글자
         cursor: password ? 'pointer' : 'not-allowed', // 입력이 없으면 클릭 비활성화
       }}
+
+      onClick={goToDone}
       >다음</button>
     </div>
   );

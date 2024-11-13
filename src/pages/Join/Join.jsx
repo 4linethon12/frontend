@@ -34,22 +34,18 @@ const Join = () => {
   const goToEnterPage = () => {
     navigate('/enter');
   };
-
-  const handleBackClick = () => {
-    navigate(-1); 
-  };
-
+  
+  const goTOPassword = () => {
+    navigate('/password')
+  }
 
   return (
     <div className="join_wrap">
-      <div className='top'>
-            <div className='back' onClick={handleBackClick}><img src={back} /></div>
-            <div className='cancel' onClick={goToEnterPage}><img src={cancel} /></div>
-        </div>
+        <div className='single_can' onClick={goToEnterPage}><img src={cancel} /></div>
 
       <div className='join_header'>
-        <p className='hi'>반가워요!</p>
-        <p className='hib'>어떻게 불러드리면 될까요?</p>
+        <p className='hi'>반가워요! <br/> 어떻게 불러드리면 될까요?</p>
+        
         <p className='join_text'>닉네임</p>
       <input
         type="text"
@@ -70,6 +66,7 @@ const Join = () => {
         color: nickname ? 'DCDCDC' : '#B2AEAE', // 버튼 글자
         cursor: nickname ? 'pointer' : 'not-allowed', // 입력이 없으면 클릭 비활성화
       }}
+      onClick={goTOPassword}
       >다음</button>
     </div>
   );

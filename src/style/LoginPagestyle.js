@@ -6,7 +6,7 @@ export const LoginBackground = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  min-height: 100vh;  
+  height: 100vh;  
   display: flex;
  
   flex-direction: column;
