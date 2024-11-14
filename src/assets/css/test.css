@@ -39,7 +39,7 @@
     font-family: SUITE;
     font-size: 14px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
   }
   
@@ -50,7 +50,7 @@
     font-family: SUITE;
     font-size: 26px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 40px; /* 153.846% */
     letter-spacing: 1.3px;
     height: 79px;
@@ -76,7 +76,7 @@
     font-size: 16px;
     font-family: SUITE;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     cursor: pointer;
     margin-top: 129px;
   }
@@ -109,7 +109,7 @@
     font-family: SUITE;
     font-size: 20px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 30px; /* 150% */
     white-space: pre-line;
   }
@@ -133,7 +133,7 @@
     font-family: SUITE;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: 25px;
     cursor: pointer;
     border: none;
@@ -153,7 +153,7 @@
     font-family: SUITE;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     border-radius: 20px;
     margin-top: 167px;
     opacity: 100%;
@@ -192,7 +192,7 @@
     font-family: SUITE;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     margin-top: 80px;
   }
   
@@ -225,7 +225,7 @@
     font-family: SUITE;
     font-size: 12px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
   }
 
@@ -268,7 +268,7 @@
     font-family: SUITE;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: normal;
   }
 
@@ -295,7 +295,7 @@
     font-family: SUITE;
     font-size: 14px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
 
   }
@@ -313,7 +313,7 @@
     font-family: SUITE;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 40px;
   }
 
@@ -330,7 +330,7 @@
     font-family: SUITE;
     font-size: 14px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
 
   }
@@ -346,3 +346,7 @@
     top: 635px;
     left: 283px;
   }
+  input:focus {
+    outline: none;
+  }
+  

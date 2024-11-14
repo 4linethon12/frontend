@@ -1,6 +1,5 @@
  import React, { useState } from 'react';
 import '../../assets/css/join.css'
-import back from '../../assets/img/join/left.svg'
 import cancel from '../../assets/img/join/x.svg'
 import { useNavigate } from 'react-router-dom';
  

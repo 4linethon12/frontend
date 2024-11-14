@@ -24,6 +24,7 @@ import TestMain from '../pages/Test/TestMain';
 import TestResult from '../pages/Test/TestResult';
 import Enter from '../pages/User/Enter'
 import TestLoding from '../pages/Test/TestLoding';
+import Tutorial from '../pages/User/Tutorial';
 
 function AppRouter() {
   return (

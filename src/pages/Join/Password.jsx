@@ -59,6 +59,7 @@ const Password = () => {
     try {
       if (nickname && isValid) {
         await join(nickname, password);
+        localStorage.setItem('nickname', nickname);
         navigate('/done');
       }
     } catch (error) {

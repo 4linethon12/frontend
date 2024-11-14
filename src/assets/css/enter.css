@@ -81,7 +81,7 @@
     font-family: SUITE;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
   }
   
   .start:hover {
@@ -108,5 +108,9 @@
   
   .login:hover {
     cursor: pointer;
+  }
+  
+  input:focus {
+    outline: none;
   }
   

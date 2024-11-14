@@ -21,7 +21,7 @@
     font-family: SUITE;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 35px; /* 145.833% */
     margin-top: 16px;
     width: 304px;
@@ -32,7 +32,7 @@
     font-family: SUITE;
     font-size: 24px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 35px; /* 145.833% */
     margin-top: 62px;
     width: 304px;
@@ -59,7 +59,7 @@
     font-family: SUITE;
     font-size: 14px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     margin-top: 33px;
 }
 
@@ -107,7 +107,7 @@
     font-family: SUITE;
     font-size: 16px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     position: absolute;
     bottom: 70px;
     border: none;
@@ -153,9 +153,14 @@
     font-family: SUITE;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 30px; /* 187.5% */
     align-self: stretch;
     margin-left: 39px;
     margin-top: 15px;
 }
+
+input:focus {
+    outline: none;
+  }
+  

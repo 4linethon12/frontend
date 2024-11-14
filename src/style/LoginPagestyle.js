@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
 export const LoginBackground = styled.div`
- background-image: url('/images/background/LoginBack.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #151723;
   width: 100vw;
   height: 100vh;  
   display: flex;
