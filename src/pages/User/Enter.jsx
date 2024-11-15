@@ -10,7 +10,7 @@ function Enter() {
   };
 
   const goToLoginPage = () => {
-    navigate('/login');
+    navigate('/LoginPage');
   };
 
   return (
