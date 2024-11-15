@@ -24,9 +24,14 @@ import TestMain from '../pages/Test/TestMain';
 import TestResult from '../pages/Test/TestResult';
 import Enter from '../pages/User/Enter'
 import TestLoding from '../pages/Test/TestLoding';
+ 
 import Mainpage3 from '../pages/manittoo/Mainpage3.1.1.2';
 import HintCheck from '../pages/Tree/HintCheck';
 import LetterWrite  from '../pages/Tree/Letterwirte';
+ 
+import Tutorial from '../pages/User/Tutorial';
+
+ 
 function AppRouter() {
   return (
     <Router>

@@ -233,3 +233,29 @@ export const BadgeText = styled.div`
   font-weight: 600;
   text-align: center;
 `;
+
+// 팝업 컨테이너 스타일
+export const PopupContainer = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;  
+  top: 0;
+  left:0;
+  z-index: 100;
+  overflow-y: auto;
+`;
+
+// 팝업 이미지 스타일
+export const PopupImage = styled.img`
+  width: 100%;
+`;
+
+// 닫기 버튼(X 아이콘) 스타일
+export const CloseIcon = styled.img`
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+`;
