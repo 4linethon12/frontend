@@ -24,8 +24,14 @@ import TestMain from '../pages/Test/TestMain';
 import TestResult from '../pages/Test/TestResult';
 import Enter from '../pages/User/Enter'
 import TestLoding from '../pages/Test/TestLoding';
+ 
+import Mainpage3 from '../pages/manittoo/Mainpage3.1.1.2';
+import HintCheck from '../pages/Tree/HintCheck';
+import LetterWrite  from '../pages/Tree/Letterwirte';
+ 
 import Tutorial from '../pages/User/Tutorial';
 
+ 
 function AppRouter() {
   return (
     <Router>
@@ -54,6 +60,7 @@ function AppRouter() {
         <Route path="/BeforeTree" element={<BeforeTree />} />
         <Route path="/WriteHintPages" element={<WriteHintPages />} />
         <Route path="/Mainpage2" element={<Mainpage2 />} />
+        <Route path="/Mainpage3" element={<Mainpage3 />} />
         <Route path="/Join" element={<Join />} />
    
         <Route path="/password" element={<Password />} />
@@ -63,6 +70,8 @@ function AppRouter() {
         <Route path="/testing" element={<TestMain />} />
         <Route path="/testresult" element={<TestResult />} />
         <Route path="/loading" element={<TestLoding />} />
+        <Route path="/HintCheck" element={<HintCheck />} />
+        <Route path="/LetterWrite" element={<LetterWrite />} />
       </Routes>
     </Router>
   );

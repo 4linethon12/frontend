@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  background-image: url('/images/background/Letter.svg'); /* 편지지 이미지 경로 */
+  background-image: url('/images/Letter/LetterBack.png'); /* 편지지 이미지 경로 */
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+ 
   align-items: center;
   flex-direction: column;
 `;
@@ -37,3 +37,41 @@ export const BodyText = styled.p`
   color: black;
   line-height: 1.5;
 `;
+
+export const ContainerImage = styled.img`
+width: 264px;
+height: 329px;
+  
+`;
+
+
+export const RightImage = styled.img`
+  width:  30px; /* 필요한 크기로 조정 */
+  height: 30px;
+   margin-left: auto;
+  
+`;
+
+export const highContainer = styled.div`
+  width: 375px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
+  border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
+  border-radius: 8px;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  
+`;
+
+export const LetterContent = styled.div`
+  margin: 20px auto;
+  padding: 15px 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #222;
+  line-height: 1.6;
+`;
+

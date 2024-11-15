@@ -8,7 +8,7 @@ export const MainBackground = styled.div`
   width: 100vw;
   min-height: 100vh;  
   display: flex;
-  justify-content: center;
+   
   flex-direction: column;
   align-items: center;
 
@@ -52,11 +52,11 @@ export const TitleText3 = styled.h1`
 `;
 export const EmptyContainer = styled.div`
   width: 320px;
-  height: 380px;
+  height: 420px;
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
   border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
   border-radius: 8px;
-  margin: 1rem 0;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
  
@@ -94,7 +94,7 @@ export const RowContainer2 = styled.div`
 export const CenteredImage = styled.img`
   width: 170px; /* 필요한 크기로 조정 */
   height: 40px;
-  
+  margin-right: 30px;
  
 `;
 

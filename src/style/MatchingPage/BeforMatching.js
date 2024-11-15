@@ -73,3 +73,23 @@ export const Divider = styled.hr`
   opacity: 0.3;
   
 `;
+
+
+export const RightImage = styled.img`
+  width:  30px; /* 필요한 크기로 조정 */
+  height: 30px;
+   margin-left: auto;
+  
+`;
+
+export const highContainer = styled.div`
+  width: 375px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
+  border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
+  border-radius: 8px;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  
+`;
