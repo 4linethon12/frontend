@@ -59,7 +59,10 @@
   }
 
   .snowball{
-    margin-top: 57px;
+    margin-top: 93px;
+    width: 206px;
+    height: 237px;
+    flex-shrink: 0;
   }
 
   .open {
@@ -192,8 +195,8 @@
     font-family: SUITE;
     font-size: 24px;
     font-style: normal;
-    font-weight: 400;
-    margin-top: 80px;
+    font-weight: 600;
+    margin-top: 50px;
   }
   
   .character_pic {
@@ -202,7 +205,8 @@
     height: 250px;
     justify-content: center;
     align-items: center;
-
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
 
   .detail {
@@ -350,3 +354,9 @@
     outline: none;
   }
   
+
+  .loding {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

@@ -80,7 +80,10 @@ const TestResult = () => {
 
   return (
     <div className="result_wrap">
-      {isLoading && <TestLoding />} 
+      <div className='loding'>
+       {isLoading && <TestLoding />} 
+      </div>
+      
 
       <div className='single_cancel' onClick={goToStart}>
         <img src={cancel} alt="Cancel" />

@@ -63,7 +63,7 @@ const Password = () => {
         navigate('/done');
       }
     } catch (error) {
-      console.error('회원가입 오류:', error);
+      alert('회원가입 실패: 아이디 또는 비밀번호를 확인하세요');
     }
   };
 
@@ -87,14 +87,16 @@ const Password = () => {
             onFocus={handleFocus}
             onBlur={handleBlur}
           />
-          {isFocused ? (
-            <span className="eye" onMouseDown={handlePwState} style={{ position: 'absolute', right: '10px', top: '63%', transform: 'translateY(-50%)' }}>
-              <img src={pwType.visible ? Noneye : Eye} alt="비밀번호 표시" />
-            </span>
-          ) : (
-            <span className="eye" style={{ position: 'absolute', right: '10px', top: '63%', transform: 'translateY(-50%)' }}>
-              <img src={isValid ? IconCheck : IconX} alt="유효성 아이콘" />
-            </span>
+          {password.length > 0 && ( // 비밀번호 입력이 있을 경우에만 유효성 아이콘 표시
+            isFocused ? (
+              <span className="eye" onMouseDown={handlePwState} style={{ position: 'absolute', right: '10px', top: '63%', transform: 'translateY(-50%)' }}>
+                <img src={pwType.visible ? Noneye : Eye} alt="비밀번호 표시" />
+              </span>
+            ) : (
+              <span className="eye" style={{ position: 'absolute', right: '10px', top: '63%', transform: 'translateY(-50%)' }}>
+                <img src={isValid ? IconCheck : IconX} alt="유효성 아이콘" />
+              </span>
+            )
           )}
         </div>
 
