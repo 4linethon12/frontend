@@ -52,8 +52,8 @@ export const TitleText3 = styled.h1`
   margin-bottom: 10%;
 `;
 export const EmptyContainer = styled.div`
-  width: 320px;
-  height: 380px;
+   width: 320px;
+   height: 460px;
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
   border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
   border-radius: 8px;
@@ -76,10 +76,13 @@ export const MiniContainer = styled.div`
 `;
 
 export const RowContainer = styled.div`
-  display: flex;
-  gap: 15px;
+   display: flex;
+  gap: 1rem; /* 텍스트 간격 */
   justify-content: center;
   align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  justify-content: space-between;
  
 `;
 export const RowContainer4 = styled.div`
@@ -99,9 +102,9 @@ export const RowContainer2 = styled.div`
 `;
 
 export const CenteredImage = styled.img`
-  width: 170px; /* 필요한 크기로 조정 */
-  height: 40px;
-  
+  width: 190px; /* 필요한 크기로 조정 */
+  height: 60px;
+  margin-left: -8%;
  
 `;
 export const LogoImage = styled.img`
@@ -345,7 +348,7 @@ export const BadgeText2 = styled.div`
 
 
 export const Item3 = styled.div`
-  min-width: 140px;
+  min-width: 320px;
   height: 140px;
   background-color: #CFD3D5;
   margin-right: 5%;
@@ -365,7 +368,7 @@ export const BadgeContainer4 = styled.div`
   display: flex;        /* 플렉스박스로 설정 */
   justify-content: center; /* 수평 가운데 정렬 */
   align-items: center;  /* 수직 가운데 정렬 */
-  
+  margin-bottom: 5%;
 `;
 
 export const BadgeText4 = styled.div`
@@ -397,5 +400,5 @@ export const RowContainerText5 = styled.div`
   font-size: 8px;
   font-family: 'SUITE';
   font-weight: 600;
-   
+   margin-top: 10%;
 `;

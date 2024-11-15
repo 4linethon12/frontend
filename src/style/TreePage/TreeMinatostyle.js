@@ -141,7 +141,7 @@ export const hint_1 = styled.img`
 export const hint_2 = styled.img`
    position: absolute;
   top: 35%;
-  left: 30%;
+  left: 20%;
 
 `;
 export const hint_3 = styled.img`

@@ -16,6 +16,7 @@ import Letterwirte   from '../pages/Tree/Letterwirte';
 import BeforeTree from '../pages/Tree/BeforeTree4.4';
 import WriteHintPages from '../pages/Tree/WriteHint4.5';
 import Mainpage2 from '../pages/manittoo/Mainpage3.1.1';
+import Mainpage1 from '../pages/manittoo/Mainpage3.1.1';
 import Join from '../pages/Join/Join';
 import Password from '../pages/Join/Password';
 import JoinDone from '../pages/Join/JoinDone';
@@ -24,7 +25,7 @@ import TestMain from '../pages/Test/TestMain';
 import TestResult from '../pages/Test/TestResult';
 import Enter from '../pages/User/Enter'
 import TestLoding from '../pages/Test/TestLoding';
- 
+import Mainpage0 from '../pages/manittoo/Mainpage3.1.0';
 import Mainpage3 from '../pages/manittoo/Mainpage3.1.1.2';
 import HintCheck from '../pages/Tree/HintCheck';
 import LetterWrite  from '../pages/Tree/Letterwirte';
@@ -42,7 +43,7 @@ function AppRouter() {
  
         
          <Route path="/LoginPage" element={<LoginPage />} />
- 
+         <Route path="/Mainpage1" element={<Mainpage1 />} />
         <Route path="/HomePage" element={<HomePage />} />
         <Route path="/MainPage" element={<Mainpage />} />
         <Route path="/MakeGroup" element={<MakeGroup />} />
@@ -52,6 +53,8 @@ function AppRouter() {
         <Route path="/BeforeMatching" element={<BeforeMatching />} />
         <Route path="/ProcessMatching" element={<ProcessMatching />} />
         <Route path="/CompleteMatching" element={<CompleteMatching />} />
+        <Route path="/Mainpage0" element={<Mainpage0 />} />
+        <Route path="/Tutorial" element={<Tutorial />} />
        
         <Route path="/FinalOpenPage" element={<FinalOpenPage />} />
         <Route path="/TreeManito" element={<TreeManito />} />

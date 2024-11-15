@@ -9,6 +9,7 @@ import hintImage1 from '/images/treegift/1.png';
 import hintImage2 from '/images/treegift/2.png';
 import hintImage3 from '/images/treegift/3.png';
 import hintImage4 from '/images/treegift/4.png';
+import LetterImage5 from '/images/treegift/5.png'; // 레터 이미지 추가
 import axios from 'axios';
 
 const TreeManito = () => {
@@ -86,10 +87,25 @@ const TreeManito = () => {
       <style.TreeContainer>
         <style.CenteredImage src={treeImage} alt="Tree Image" />
         {hints.map((hint, index) => {
-          // 이미지 배열 길이를 초과하지 않도록 조건 추가
-          if (index >= hintImages.length) {
+          if (index >= hintImages.length && index !== 4) {
             console.warn('힌트 이미지 배열보다 많은 힌트가 있습니다. 추가 이미지 필요.');
             return null; // 초과 힌트는 렌더링하지 않음
+          }
+
+          if (index === 4) {
+            // 5번째 힌트는 레터 처리
+            return (
+              <style.HintContainer
+                key="letter"
+                top="70%" // 적절한 위치
+                left="50%"
+                onClick={() => navigate('/Letter')}
+                style={{ cursor: 'pointer' }}
+              >
+                <img src={LetterImage5} alt="Letter" style={{ width: '50px', height: '50px' }} />
+                <style.TitleText4>레터</style.TitleText4>
+              </style.HintContainer>
+            );
           }
 
           const HintStyle = style[`hint_${index + 1}`]; // 동적 스타일

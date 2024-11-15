@@ -15,7 +15,7 @@ const GroupCompletePage = () => {
         navigator.clipboard.writeText(code) // 클립보드에 code 복사
             .then(() => {
                 alert("입장 코드가 복사되었습니다!");
-                navigate('/MainPage'); // 코드 복사 후 MainPage로 이동
+                navigate('/Mainpage2'); // 코드 복사 후 MainPage로 이동
             })
             .catch(() => alert("코드 복사에 실패했습니다."));
     };

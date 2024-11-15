@@ -26,7 +26,7 @@ export const EmptyContainer = styled.div`
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+ 
   
 `;
 export const TitleText = styled.h1`
@@ -41,8 +41,11 @@ export const SmallText = styled.h1`
   font-weight: 500;
   font-size: 14px;
   color: white;
-  margin: ${(props) => props.margin || '0'};
+  margin-bottom: 5%;
   opacity: 0.5;
+  align-items: start;
+  text-align: left; 
+   
 `;
 
 export const SmallContainer = styled.div`
@@ -60,7 +63,8 @@ export const SmallContainer = styled.div`
 `;
 export const RowContainer = styled.div`
   display: flex;
-   
+  
+  flex-wrap: wrap;
   justify-content: start;
   align-items: center;
 `;
