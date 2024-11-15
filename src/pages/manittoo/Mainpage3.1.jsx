@@ -52,6 +52,10 @@ const Mainpage = () => {
     }
   }, []);
 
+  const goToTest = () => {
+    navigate('/teststart')
+ };
+
   return (
     <styles.MainBackground>
       <styles.EmptyContainer>
@@ -60,7 +64,7 @@ const Mainpage = () => {
           <styles.TitleText onClick={handleNavigateTree} style={{ cursor: 'pointer' }}>나의 모니또 트리보러가기</styles.TitleText>
         </styles.RowContainer>
 
-        <styles.Container>
+        <styles.Container onClick={goToTest}>
           <styles.RowContainer>
             <styles.LeftImage src={BallImage} alt="BallImage" />
             <styles.Text>친구가 보는 나는 어떤 산타일까?!{"\n"}궁금하다면 클릭! 🎄✨</styles.Text>
