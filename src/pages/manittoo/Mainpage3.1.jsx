@@ -78,7 +78,7 @@ const Mainpage = () => {
         <styles.RowContainer>
  
         <styles.TitleText3>마니또 트리를 시작해보세요!</styles.TitleText3>
-        <styles.MiniContainer>
+        <styles.MiniContainer onClick={togglePopup}>
         <styles.MiniText>🎁 튜토리얼</styles.MiniText>  
         </styles.MiniContainer>
  
