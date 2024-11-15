@@ -140,6 +140,13 @@ const Mainpage2 = () => {
     navigate('/teststart')
  };
 
+ const togglePopup = () => {
+  setIsPopupVisible(!isPopupVisible); 
+  // 팝업을 닫을 때 localStorage에 값 설정
+  if (isPopupVisible) {
+    localStorage.setItem('tutorialSeen', 'true');
+  }
+};
   
   return (
     <styles.MainBackground>
@@ -161,7 +168,7 @@ const Mainpage2 = () => {
 
         <styles.RowContainer>
           <styles.TitleText3>마니또 트리를 시작해보세요!</styles.TitleText3>
-          <styles.MiniContainer>
+          <styles.MiniContainer onClick={togglePopup}>
             <styles.MiniText>🎁  튜토리얼</styles.MiniText>  
           </styles.MiniContainer>
         </styles.RowContainer>

@@ -89,6 +89,19 @@ const Mainpage3 = () => {
   const WriteHintPages = () => {
      navigate('/WriteHintPages')
   };
+
+  const goToTest = () => {
+    navigate('/teststart')
+ };
+
+ const togglePopup = () => {
+  setIsPopupVisible(!isPopupVisible); 
+  // 팝업을 닫을 때 localStorage에 값 설정
+  if (isPopupVisible) {
+    localStorage.setItem('tutorialSeen', 'true');
+  }
+};
+
   return (
     <styles.MainBackground>
       <styles.EmptyContainer>
@@ -99,7 +112,7 @@ const Mainpage3 = () => {
           </styles.TitleText>
         </styles.RowContainer>
 
-        <styles.Container>
+        <styles.Container onClick={goToTest}>
           <styles.RowContainer>
             <styles.LeftImage src={BallImage} alt="BallImage" />
             <styles.Text>친구가 보는 나는 어떤 산타일까?!{"\n"}궁금하다면 클릭! 🎄✨</styles.Text>
@@ -109,7 +122,7 @@ const Mainpage3 = () => {
 
         <styles.RowContainer>
           <styles.TitleText3>마니또 트리를 시작해보세요!</styles.TitleText3>
-          <styles.MiniContainer>
+          <styles.MiniContainer onClick={togglePopup}>
             <styles.MiniText>🎁  튜토리얼</styles.MiniText>  
           </styles.MiniContainer>
         </styles.RowContainer>
