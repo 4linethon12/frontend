@@ -62,30 +62,34 @@ const MakeMissionPage = () => {
     return (
         <styles.MainBackground>
             <style.highContainer>
-                <style.RowContainer>
-                    <style.CenteredImage
-                        src={chervon}
-                        alt="chervon"
-                        onClick={handleClickBack}
-                        style={{ cursor: 'pointer' }}
-                    />
-                    <style.CenteredImage
-                        src={CloseImage}
-                        alt="CloseImage"
-                        onClick={handleClickClose}
-                        style={{ cursor: 'pointer' }}
-                    />
-                </style.RowContainer>
-                <style.ProgressBarContainer>
-                    <style.ProgressBarFill style={{ width: `${100}%` }} />
-                </style.ProgressBarContainer>
+                <style.CancelContainer>
+                    <style.RowContainer>
+                        <style.CenteredImage
+                            src={chervon}
+                            alt="chervon"
+                            onClick={handleClickBack}
+                            style={{ cursor: 'pointer' }}
+                        />
+                        <style.CenteredImage
+                            src={CloseImage}
+                            alt="CloseImage"
+                            onClick={handleClickClose}
+                            style={{ cursor: 'pointer' }}
+                        />
+                    </style.RowContainer>
+                </style.CancelContainer>
+                <style.ProgressContainer>
+                    <style.ProgressBarContainer>
+                        <style.ProgressBarFill style={{ width: `${100}%` }} />
+                    </style.ProgressBarContainer>
+                </style.ProgressContainer>
             </style.highContainer>
             <style.EmptyContainer>
-                <style.TitleText margin="10px">미션 만들기</style.TitleText>
+                <style.TitleText>미션 만들기</style.TitleText>
                 <style.TitleText2>
                     흥미진진한 마니또 게임을 위해 미션을 추가해 봐요!
                 </style.TitleText2>
-                <style.TitleText3 margin="5%">
+                <style.TitleText3>
                     미션
                 </style.TitleText3>
 
@@ -95,12 +99,12 @@ const MakeMissionPage = () => {
                     onChange={handleMissionChange}
                     maxLength={16} // 최대 16글자 제한
                 />
-                <style.TitleText3 margin="5%">
+                <style.TitleText5>
                     미션은 최대 16자리까지 입력 가능해요{' '}
-                    <span style={{ marginLeft: '10px', color: '#333', fontSize: '14px' }}>
+                    <span>
                         ({mission.length}/16)
                     </span>
-                </style.TitleText3>
+                </style.TitleText5>
 
                 <style.TitleText4 onClick={openModal} style={{ cursor: 'pointer' }}>
                     미션 추천 받을래요!

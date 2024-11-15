@@ -23,12 +23,12 @@ export const CenteredImage = styled.img`
 
 
 export const highContainer = styled.div`
-  width: 375px;
+  width: 100%;
   height: 50px;
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
   border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
   border-radius: 8px;
-  margin: 1rem 0;
+
   display: flex;
   flex-direction: column;
   
@@ -47,11 +47,19 @@ export const RowContainer = styled.div`
   justify-content: space-between;
 `;
 
+export const CancelContainer = styled.div`
+  margin: 10px;
+`;
+
+export const ProgressContainer = styled.div `
+  padding: 0px;
+  margin: 0px;
+`
 
 
 export const ProgressBarContainer = styled.div`
   width: 100%;
-  height: 5px; /* 높이를 줄여서 긴 직사각형 모양으로 */
+  height: 4px; /* 높이를 줄여서 긴 직사각형 모양으로 */
   background-color: #17493E; /* 배경을 어두운 색으로 설정 */
    
   overflow: hidden;
@@ -71,37 +79,47 @@ export const TitleText = styled.h1`
   font-weight: 500;
   font-size: 1.5rem;
   color: white;
-  margin-top: ${(props) => props.margin || '0'};
-  margin-bottom: ${(props) => props.margin || '0'};
+
+  margin-top: 33px;
 `;
 export const TitleText2 = styled.h1`
   font-family: "SUITE", sans-serif;
   font-weight: 200; /* Weight */
   font-size: 14px;
   color: white;
-  margin-top: ${(props) => props.margin || '0'};
-  margin-bottom: ${(props) => props.margin || '0'};
+
+  margin-top: 22px;
 `;
 export const TitleText3 = styled.h1`
 font-family: "SUITE", sans-serif;
-font-weight: 200; /* Weight */
-font-size: 12px;
+font-weight: 300; /* Weight */
+font-size: 14px;
 color: white;
-margin-top: ${(props) => props.margin || '0'};
-margin-bottom: ${(props) => props.margin || '0'};
+margin-top: 25px;
+margin-bottom: 13px;
 opacity: 0.4;
 `;
 
 export const TitleText4 = styled.h1`
-
 font-family: "SUITE", sans-serif;
 font-weight: 200; /* Weight */
-font-size: 1.0rem;
-color: white;
-margin-top: 80%;
-margin-bottom: 5%;
-opacity: 0.6;
+font-size: 14px;
+color: #7B9F99;
+margin-top: 325px;
+margin-bottom: 23px;
 text-decoration: underline;
 text-align: center;
+
+`;
+
+export const TitleText5 = styled.h1`
+display: flex;
+font-family: "SUITE", sans-serif;
+font-weight: 300; /* Weight */
+font-size: 14px;
+color: white;
+margin-top: 13px;
+opacity: 0.4;
+justify-content: space-between;
 `;
 
