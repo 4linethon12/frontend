@@ -8,7 +8,7 @@ const ProcessMatching = () => {
   // useEffect로 3초 후 페이지 이동
   React.useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/CompleteMatching'); // 3초 후 /CompleteMatching 페이지로 이동
+      navigate('/Mainpage2'); // 3초 후 /CompleteMatching 페이지로 이동
     }, 3000); // 3000ms = 3초
 
     // 컴포넌트 언마운트 시 타이머를 클리어

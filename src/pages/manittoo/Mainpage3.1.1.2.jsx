@@ -82,9 +82,9 @@ const Mainpage3 = () => {
     navigate('/TreeManito');
   }; 
 
-  const BeforeMatching = () => {
-    navigate('/BeforeMatching');
-  }; 
+  // const BeforeMatching = () => {
+  //   navigate('/BeforeMatching');
+  // }; 
 
   const WriteHintPages = () => {
      navigate('/WriteHintPages')
@@ -149,8 +149,11 @@ const Mainpage3 = () => {
             <styles.LogoImage src={SantaLogo} alt="santaLogo" />
             <styles.RowContainerText>  {nickname ? `${nickname}` : ''}</styles.RowContainerText>
           </styles.RowContainer4>
-          
+
+          <styles.RowContainer5>
+          <styles.RowContainerText2>{groupName ? `${groupName}팀` : '팀 이름을 가져올 수 없습니다.'}</styles.RowContainerText2>
           <styles.BadgeContainer3>
+          
           <styles.RowContainerText3>
             MISSION
           </styles.RowContainerText3>
@@ -165,20 +168,13 @@ const Mainpage3 = () => {
           <styles.Text>미션 데이터를 가져올 수 없습니다.</styles.Text>
         )}
           </styles.RowContainerText2>
+          
           </styles.BadgeContainer3>
-          <styles.RowContainerText2>{groupName ? `${groupName}팀` : '팀 이름을 가져올 수 없습니다.'}</styles.RowContainerText2>
+          </styles.RowContainer5>
           </styles.Item2> {/* mission 데이터가 없다면 기본 메시지 표시 */}
 
 
-          <styles.Item2 onClick={BeforeMatching}>
-        <styles.SantaImage src={Santaman} alt="BallImage" />
-          <styles.BadgeContainer2 >
-         
-            <styles.BadgeText2  >
-              매칭대기중
-            </styles.BadgeText2>
-          </styles.BadgeContainer2>
-        </styles.Item2>
+        
 {/* 
 
         <styles.Item3 onClick={BeforeMatching}>

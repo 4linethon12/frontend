@@ -2,11 +2,11 @@ import { useNavigate } from 'react-router-dom';
 import * as styles from '../../style/ManittoPage/Mainpagestyle2';
 import StyledContainer from '../../component/manittoo/Container';
 import CountdownBadge from '../../component/manittoo/RedButton';
-import LogoImage from '/images/mainpage/Sub.png'; 
+import LogoImage from '/images/mainpage/ShiningLogo.png'; 
 import BallImage from '/images/mainpage/Christmas Snow Globe.png'; 
 import RightImage from '/images/mainpage/chevron-right.png'; 
 import Santaman from '/images/santa.png'; 
-import SantaLogo from '/images/마니또.png'; 
+// import SantaLogo from '/images/마니또.png'; 
  import Santgairl from '/images/santa3.png'; 
  import axios from 'axios';
  import Gift from '/images/mainpage/Gift.png'; 
@@ -18,10 +18,11 @@ const Mainpage2 = () => {
 
    
   const [nickname, setNickname] = useState('');
-  const [mission, setMission] = useState(null); // 미션 데이터 상태
-  const [groupName, setGroupName] = useState(null);  
-  const [loading, setLoading] = useState(true); // 로딩 상태
-  const [manitoNickname, setManitoNickname] = useState(''); 
+  // const [mission, setMission] = useState(null); // 미션 데이터 상태
+  // const [groupName, setGroupName] = useState(null);  
+  // const [loading, setLoading] = useState(true); // 로딩 상태
+  // const [manitoNickname, setManitoNickname] = useState(''); 
+  
   useEffect(() => {
     const storedNickname = localStorage.getItem('nickname');
     if (storedNickname) {
@@ -32,6 +33,7 @@ const Mainpage2 = () => {
       const token = localStorage.getItem('token');
       if (!token) {
         console.error('토큰이 없습니다.');
+        navigate('/LoginPage'); // 로그인 페이지로 이동
         return;
       }
   
@@ -47,18 +49,17 @@ const Mainpage2 = () => {
         );
   
         const groupData = response.data;
+  
         console.log('API 응답 데이터:', groupData);
   
         if (!Array.isArray(groupData) || groupData.length === 0) {
           console.warn('그룹 데이터가 없습니다.');
-          navigate('/Mainpage');
+          navigate('/Mainpage0'); // 그룹 생성 전으로 이동
           return;
         }
   
         const group = groupData[0];
-        setGroupName(group.name);
-         localStorage.setItem('groupName', group.name); 
-        setMission(group.mission);
+        localStorage.setItem('groupName', group.name);
         localStorage.setItem('groupId', group.id);
   
         const myParticipant = group.participants.find(
@@ -70,6 +71,8 @@ const Mainpage2 = () => {
           console.log('내 ID:', myId);
   
           const giverMatch = group.matches.find((match) => match.giver === myId);
+  
+          // 마니또 매칭 확인 로직 추가
           if (giverMatch) {
             const giverMatchId = giverMatch.id;
             const receiverId = giverMatch.receiver;
@@ -81,21 +84,35 @@ const Mainpage2 = () => {
   
             if (receiverParticipant) {
               const receiverNickname = receiverParticipant.user.nickname;
-              setManitoNickname(receiverNickname);
               localStorage.setItem('ManitoNickname', receiverNickname);
             }
-          }
   
-          const receiverMatch = group.matches.find((match) => match.receiver === myId);
-          if (receiverMatch) {
-            const receiverMatchId = receiverMatch.id;
-            localStorage.setItem('receiverMatchId', receiverMatchId);
+            // 마니또 매칭이 완료된 경우
+            navigate('/Mainpage2');
+            return;
+          } else {
+            // 그룹은 생성되었으나 매칭이 안 된 경우
+            navigate('/Mainpage1');
+            return;
           }
+        } else {
+          // 그룹에 참가하지 않은 경우
+          console.warn('그룹에 참가하지 않은 사용자입니다.');
+          navigate('/Mainpage0');
+          return;
         }
+  
+        // 해커톤 당일 로직 추가
+        // const today = new Date();
+        // const hackathonDate = new Date('2024-11-16');
+        // if (today.toDateString() === hackathonDate.toDateString()) {
+        //   navigate('/Mainpage3'); // 해커톤 당일
+        //   return;
+        // }
+  
       } catch (error) {
         console.error('API 요청 실패:', error);
-      } finally {
-        setLoading(false);
+        navigate('/error'); // 에러 페이지로 이동
       }
     };
   
@@ -115,9 +132,9 @@ const Mainpage2 = () => {
     navigate('/BeforeMatching');
   }; 
 
-  const WriteHintPages = () => {
-     navigate('/WriteHintPages')
-  };
+  // const WriteHintPages = () => {
+  //    navigate('/WriteHintPages')
+  // };
 
   const goToTest = () => {
     navigate('/teststart')
@@ -128,7 +145,7 @@ const Mainpage2 = () => {
     <styles.MainBackground>
       <styles.EmptyContainer>
         <styles.RowContainer>
-          <styles.CenteredImage src={LogoImage} alt="LogoImage" />
+        <styles.CenteredImage src={LogoImage} alt="LogoImage" />
           <styles.TitleText onClick={handleNavigateTree} style={{ cursor: 'pointer' }}>
           {nickname ? `${nickname}` : ''} 트리보러가기
           </styles.TitleText>
@@ -178,14 +195,14 @@ const Mainpage2 = () => {
 
       {/* DragScrollContainer 안에 미션 텍스트 렌더링 */}
       <styles.DragScrollContainer>
-        <styles.Item2  onClick={WriteHintPages} >   
         
-          <styles.RowContainer4>
+        
+          {/* <styles.RowContainer4>
             <styles.LogoImage src={SantaLogo} alt="santaLogo" />
             <styles.RowContainerText> 마니또 닉네임: {manitoNickname || '로딩 중...'}</styles.RowContainerText>
-          </styles.RowContainer4>
+          </styles.RowContainer4> */}
           
-          <styles.BadgeContainer3>
+          {/* <styles.BadgeContainer3>
           <styles.RowContainerText3>
             MISSION
           </styles.RowContainerText3>
@@ -200,10 +217,9 @@ const Mainpage2 = () => {
           <styles.Text>미션 데이터를 가져올 수 없습니다.</styles.Text>
         )}
           </styles.RowContainerText2>
-          </styles.BadgeContainer3>
-          <styles.RowContainerText2>{groupName ? `${groupName}팀` : '팀 이름을 가져올 수 없습니다.'}</styles.RowContainerText2>
-          </styles.Item2> {/* mission 데이터가 없다면 기본 메시지 표시 */}
-
+          </styles.BadgeContainer3> */}
+         
+        
 
       
         <styles.Item3 onClick={BeforeMatching}>

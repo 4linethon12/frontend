@@ -92,14 +92,7 @@ export const RowContainer = styled.div`
   justify-content: center;
   align-items: center;
  
-`;
-export const RowContainer4 = styled.div`
-  display: flex;
-  gap: 15px;
-  justify-content: flex-start; /* 부모 컨테이너 기준으로 수평 정렬 */
-  align-items: flex-start; /* 부모 컨테이너 */
- 
-`;
+`; 
 
 export const BadgeContainer4 = styled.div`
   width: 60px;
@@ -135,12 +128,7 @@ export const CenteredImage = styled.img`
   
  
 `;
-export const LogoImage = styled.img`
-  width: 25px; /* 필요한 크기로 조정 */
-  height: 25px;
-  
  
-`;
 export const LeftImage = styled.img`
   width: 50px; /* 필요한 크기로 조정 */
   height: 60px;
@@ -292,32 +280,7 @@ export const BadgeText = styled.div`
   font-family: 'SUITE';
   font-weight: 600;
   text-align: center;
-`;
-export const RowContainerText = styled.div`
-  color: #254434;
-  font-size: 14px;
-  font-family: 'SUITE';
-  font-weight: 600;
-  overflow: hidden;
-`;
-export const RowContainerText2 = styled.div`
-  color: #254434;
-  font-size: 10px;
-  font-family: 'SUITE';
-  font-weight: 400;
-  text-overflow: ellipsis;
-   margin-right: 5%;
-  display: flex;
-  margin-top: 5%;
-  align-self: flex-end; 
-`;
-export const RowContainerText3 = styled.div`
-  color: #254434;
-  font-size: 10px;
-  font-family: 'SUITE';
-  font-weight: 600;
-   
-`;
+`; 
 
 export const DragScrollContainer = styled(ScrollContainer)`
   display: flex;
@@ -325,6 +288,8 @@ export const DragScrollContainer = styled(ScrollContainer)`
   height: 30vh;
   overflow-x: auto;
   justify-content: center;
+  
+  
 `;
 
 export const Item = styled.div`
@@ -335,19 +300,7 @@ export const Item = styled.div`
   border-radius: 8px;
   margin-left:10%;
  
-`;
-export const Item2= styled.div`
-  min-width: 140px;
-  height: 140px;
-  background-color: #CFD3D5;
-  margin-right: 5%;
-  border-radius: 8px;
-  margin-left:5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
+`; 
 export const Item3 = styled.div`
   min-width: 140px;
   height: 140px;
@@ -372,14 +325,7 @@ export const BadgeContainer2 = styled.div`
   align-items: center;
 `;
 
-export const BadgeContainer3 = styled.div`
-  width: 124px;
-  height:65px;
-  background: rgba(255, 253, 253, 0.80);
-  border-radius: 10px;
-  margin-top: 10%;
-  
-`;
+ 
 
 export const BadgeText2 = styled.div`
   color: white;
@@ -395,4 +341,87 @@ export const RowContainerText5 = styled.div`
   font-family: 'SUITE';
   font-weight: 600;
    
+`;
+
+
+export const Item2 = styled.div`
+  min-width: 320px; /* 카드의 최소 너비 설정 */
+  height: 140px; /* 카드의 높이 설정 */
+  background-color: #CFD3D5; /* 배경 색상 */
+ 
+  border-radius: 8px; /* 둥근 모서리 */
+ 
+  display: flex;
+  flex-direction: row; /* 이미지와 텍스트를 가로로 배치 */
+  
+  justify-content: center;
+  align-items: center;
+ 
+ 
+`;
+
+export const RowContainer4 = styled.div`
+  display: flex;
+  flex-direction: column; /* 이름과 이미지를 세로로 배치 */
+  margin-left: 10%;
+  margin-right: 15px; /* 텍스트와의 간격 조정 */
+`;
+
+export const LogoImage = styled.img`
+  width: 60px; /* 이미지 크기 설정 */
+  height: 60px;
+  border-radius: 50%; /* 원형으로 만들기 */
+  margin-bottom: 8px;
+`;
+
+export const RowContainerText = styled.div`
+  font-family: 'SUITE', sans-serif;
+  font-size: 12px; /* 글자 크기 */
+  font-weight: 600;
+  color: #184E40; /* 글자 색상 */
+  text-align: center;
+`;
+
+export const RowContainer5 = styled.div`
+  display: flex;
+  flex-direction: column; /* 미션 박스와 텍스트를 세로로 배치 */
+  text-align: center;
+ margin-left: 5%;
+  width: 100%; /* 박스가 남은 공간을 차지하도록 설정 */
+  height: 100%; /* 부모 요소 높이에 맞추기 */
+  
+`;
+
+export const BadgeContainer3 = styled.div`
+  width: 177px;
+  height: 93px;
+  background: rgba(255, 253, 253, 0.8); /* 반투명 배경 */
+  border-radius: 10px; /* 둥근 모서리 */
+  margin-top: 8px; /* 상단 여백 */
+  padding: 10px; /* 내부 여백 */
+  display: flex;
+  flex-direction: column; /* 텍스트를 세로로 배치 */
+   
+  align-items: flex-start; /* 텍스트를 왼쪽 정렬 */
+`;
+
+export const RowContainerText3 = styled.div`
+  font-family: 'SUITE', sans-serif;
+  font-size: 12px; /* "MISSION" 텍스트 크기 */
+  font-weight: 600;
+  color: #254434; /* 텍스트 색상 */
+  margin-bottom: 5px; /* 아래 텍스트와 간격 추가 */
+`;
+
+export const RowContainerText2 = styled.div`
+  font-family: 'SUITE', sans-serif;
+   
+  font-weight: 400;
+  color: #254434; /* 텍스트 색상 */
+   
+  text-overflow: ellipsis; /* 텍스트가 넘칠 경우 말줄임 처리 */
+  white-space: nowrap; /* 한 줄로 표시 */
+ 
+  font-size: 11px; /* 미션 내용 텍스트 크기 */
+margin-top: 3px; /* "MISSION" 텍스트와 간격 */
 `;

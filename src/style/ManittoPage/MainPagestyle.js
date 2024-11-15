@@ -17,9 +17,9 @@ export const MainBackground = styled.div`
 export const TitleText = styled.h1`
   font-family: "SUITE", sans-serif;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 10px;
   color: white;
-  margin: ${(props) => props.margin || '0'};
+  
 `;
 
 
@@ -81,6 +81,7 @@ export const RowContainer = styled.div`
   align-items: center;
   margin-top: 5%;
   margin-bottom: 5%;
+  justify-content: space-between;
 `;
 
 export const RowContainer2 = styled.div`
@@ -92,9 +93,9 @@ export const RowContainer2 = styled.div`
 `;
 
 export const CenteredImage = styled.img`
-  width: 170px; /* 필요한 크기로 조정 */
-  height: 40px;
-  margin-right: 30px;
+  width: 190px; /* 필요한 크기로 조정 */
+  height: 60px;
+  margin-left: -8%;
  
 `;
 
@@ -140,7 +141,7 @@ export const Divider = styled.hr`
 `;
 
 export const Container = styled.div`
-  width: ${(props) => props.width || '320px'};
+  width: ${(props) => props.width || '318px'};
   height: ${(props) => props.height || '70px'};
   background-color: rgba(255, 253, 253, 0.8); /* 배경색과 투명도 설정 */
   border-radius: 8px;

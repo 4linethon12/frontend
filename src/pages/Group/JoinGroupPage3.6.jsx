@@ -57,7 +57,7 @@ const JoinGroupPage = () => {
         <styles.MainBackground>
             <style.highContainer>
                 <style.CenteredImage src={chervon} alt="chervon"
-                    onClick={() => navigate('/MainPage')} // 뒤로 가는 버튼 처리
+                    onClick={() => navigate('/MainPage2')} // 뒤로 가는 버튼 처리
                     style={{ cursor: 'pointer' }}  
                 />
                 <style.ProgressBarContainer>

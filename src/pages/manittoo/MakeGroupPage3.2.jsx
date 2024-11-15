@@ -21,7 +21,7 @@ const MakeGroupPage = () => {
     };
 
     const handleClickClose = () => {
-        navigate('/MainPage');
+        navigate(-1); // 브라우저 히스토리에서 이전 페이지로 이동
     };
 
     const handleGroupNameChange = (event) => {

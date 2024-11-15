@@ -7,7 +7,7 @@ const JoinDone = () => {
   const navigate = useNavigate();
   
   const goToMainPage = () => {
-    navigate('/MainPage');
+    navigate('/LoginPage');
   };
 
   return (

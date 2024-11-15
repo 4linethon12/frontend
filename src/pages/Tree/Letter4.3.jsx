@@ -16,14 +16,12 @@ const Letter = () => {
   const groupId = localStorage.getItem('groupId'); // 로컬스토리지에서 그룹 ID 가져오기
 
   useEffect(() => {
-    // 로컬스토리지에서 사용자 이름과 마니또 이름 가져오기
     const storedUserName = localStorage.getItem('nickname') || '사용자 이름 없음';
     const storedManitoName = localStorage.getItem('ManitoNickname') || '마니또 이름 없음';
 
-    setUserName(storedUserName); // 사용자 이름 설정
-    setManitoName(storedManitoName); // 마니또 이름 설정
+    setUserName(storedUserName);
+    setManitoName(storedManitoName);
 
-    // API에서 그룹 ID를 기반으로 Letter 데이터 가져오기
     const fetchLetter = async () => {
       if (!token || !groupId) {
         console.error('필수 데이터가 없습니다. (토큰 또는 그룹 ID)');
@@ -32,7 +30,7 @@ const Letter = () => {
 
       try {
         const response = await axios.get(
-          `http://43.201.50.47:8000/api/messages/messages/for-receiver/${groupId}/`, // API URL
+          `http://43.201.50.47:8000/api/messages/messages/for-receiver/${groupId}/`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -45,7 +43,6 @@ const Letter = () => {
         console.log('받은 레터 데이터:', letterData);
 
         if (Array.isArray(letterData) && letterData.length > 0) {
-          // 첫 번째 레터 데이터를 가져옴
           setLetter(letterData[0].letter || '레터 내용이 없습니다.');
         } else {
           setLetter('레터 내용이 없습니다.');
@@ -73,16 +70,19 @@ const Letter = () => {
             src={chervon}
             alt="chervon"
             onClick={() => navigate('/TreeManito')}
-          ></style.RightImage>
+          />
         </style.highContainer>
         <style.TitleText2>Letter from Manito</style.TitleText2>
-        <style.ContainerImage src={letterSvg} alt="Letter SVG" />
-        <style.LetterContent>
-          <p><strong>보낸 사람:</strong> {manitoName}</p>
-          <p><strong>받는 사람:</strong> {userName}</p>
-          <p><strong>레터 내용:</strong></p>
-          <p>{letter}</p>
-        </style.LetterContent>
+
+        {/* 편지 이미지와 내용 */}
+        <style.LetterWrapper>
+          <style.ContainerImage src={letterSvg} alt="Letter SVG" />
+          <style.LetterText>
+            <style.SenderText>To: {manitoName}</style.SenderText>
+            <style.LetterBodyText>{letter}</style.LetterBodyText>
+            <style.ReceiverText>From: {userName}</style.ReceiverText>
+          </style.LetterText>
+        </style.LetterWrapper>
       </style.ContentContainer>
     </style.MainContainer>
   );

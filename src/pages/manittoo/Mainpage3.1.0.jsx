@@ -12,7 +12,7 @@ import Santgairl from '/images/santa3.png';
 import PopupImage from '../../assets/img/enter/tutorial.svg';
 import CloseIcon from '../../assets/img/join/x.svg';
 
-const Mainpage = () => {
+const Mainpage0 = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const navigate = useNavigate();
   const [nickname, setNickname] = useState('');
@@ -122,11 +122,11 @@ const Mainpage = () => {
       <styles.BottomContainer>
         <styles.Image2 src={Santaman} alt="SantaImage" />
         <styles.BadgeContainer>
-          <styles.BadgeText>마니또 매칭 대기중이에요!</styles.BadgeText>
+          <styles.BadgeText>아직 생성된 그룹이 없어요</styles.BadgeText>
         </styles.BadgeContainer>
       </styles.BottomContainer>
     </styles.MainBackground>
   );
 };
 
-export default Mainpage;
+export default Mainpage0;
