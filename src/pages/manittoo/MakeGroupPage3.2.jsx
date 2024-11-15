@@ -1,4 +1,3 @@
-// MakeGroupPage.js
 import { useState } from 'react';
 import * as styles from '../../style/ManittoPage/BackGround';
 import * as style from '../../style/ManittoPage/MakeGroupPage';
@@ -12,8 +11,6 @@ const MakeGroupPage = () => {
     const [groupName, setGroupNameLocal] = useState('');
     const navigate = useNavigate();
     
-
-   
     const handleNextClick = () => {
         if (groupName.trim() === "") {
             alert("그룹 이름을 입력해 주세요.");
@@ -56,9 +53,15 @@ const MakeGroupPage = () => {
                     placeholder="그룹 이름을 입력" 
                     value={groupName} 
                     onChange={handleGroupNameChange} 
+                    maxLength={10} // 최대 글자 수 설정
                 />
-                <style.TitleText3 margin="10px">이름은 최대 10자리까지 입력 가능해요</style.TitleText3>
-
+                {/* 글자 수 표시 */}
+                 
+                <style.TitleText3 margin="10px">
+                    이름은 최대 10자리까지 입력 가능해요  <span>({groupName.length}/10)</span> 
+                </style.TitleText3>
+                
+               
                 <Button onClick={handleNextClick} marginTop="100%">다음</Button>
             </style.EmptyContainer>
         </styles.MainBackground>

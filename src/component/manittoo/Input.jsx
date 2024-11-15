@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Vector from '/images/Group/Vector.png'; 
+import ErrorIcon from '/images/Group/Check.svg'; // 조건에 맞지 않을 때의 아이콘
+import SuccessIcon from '/images/Group/Error.svg'; // 조건을 만족할 때의 아이콘
+
 // 부모 컨테이너 스타일 설정
 const InputContainer = styled.div`
   position: relative;
@@ -18,7 +20,7 @@ const StyledInput = styled.input`
   box-sizing: border-box;
   color: #333;
   background-color: #fff;
- height: 50px;
+  height: 50px;
   &:focus {
     outline: none;
     border-color: #007bff;
@@ -36,7 +38,17 @@ const Icon = styled.img`
   pointer-events: none; /* 클릭 이벤트 방지 */
 `;
 
-const Input = ({ placeholder, value, onChange, icon }) => {
+const Input = ({ placeholder, value, onChange }) => {
+  // 조건에 따른 아이콘 설정
+  let icon;
+  if (value.length >= 10) {
+    icon = SuccessIcon; // 조건을 만족하면 성공 아이콘
+  } else if (value.length > 0) {
+    icon = ErrorIcon; // 조건에 맞지 않으면 에러 아이콘
+  } else {
+    icon = ''; // 아무것도 입력하지 않으면 아이콘 없음
+  }
+
   return (
     <InputContainer>
       <StyledInput 
@@ -45,7 +57,7 @@ const Input = ({ placeholder, value, onChange, icon }) => {
         value={value} 
         onChange={onChange} 
       />
-      <Icon src={icon || Vector} alt="Input Icon" />
+      {icon && <Icon src={icon} alt="Input Icon" />}
     </InputContainer>
   );
 };
@@ -53,15 +65,12 @@ const Input = ({ placeholder, value, onChange, icon }) => {
 // PropTypes 설정
 Input.propTypes = {
   placeholder: PropTypes.string,
-  value: PropTypes.string,
+  value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  icon: PropTypes.string, // 동적으로 아이콘 이미지를 전달할 수 있도록 추가
 };
 
 Input.defaultProps = {
   placeholder: 'Enter text here...',
-  value: '',
-  icon: Vector, // 기본 아이콘 설정
 };
 
 export default Input;

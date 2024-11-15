@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import * as styles from '../../style/ManittoPage/Mainpagestyle2';
+import * as styles from '../../style/ManittoPage/Mainpagestyle3';
 import StyledContainer from '../../component/manittoo/Container';
 import CountdownBadge from '../../component/manittoo/RedButton';
 import LogoImage from '/images/mainpage/Sub.png'; 
@@ -8,20 +8,21 @@ import RightImage from '/images/mainpage/chevron-right.png';
 import Santaman from '/images/santa.png'; 
 import SantaLogo from '/images/마니또.png'; 
  import Santgairl from '/images/santa3.png'; 
+//  import Gift from '/images/mainpage/Gift.png'; 
  import axios from 'axios';
- import Gift from '/images/mainpage/Gift.png'; 
 // import { useSelector } from 'react-redux'; // Redux에서 데이터 가져오기
 import { useEffect, useState } from 'react';
 
-const Mainpage2 = () => {
+const Mainpage3 = () => {
   const navigate = useNavigate();
 
    
   const [nickname, setNickname] = useState('');
   const [mission, setMission] = useState(null); // 미션 데이터 상태
-  const [groupName, setGroupName] = useState(null);  
+  const [groupName, setGroupName] = useState(null); 
+  
   const [loading, setLoading] = useState(true); // 로딩 상태
-  const [manitoNickname, setManitoNickname] = useState(''); 
+
   useEffect(() => {
     const storedNickname = localStorage.getItem('nickname');
     if (storedNickname) {
@@ -47,50 +48,21 @@ const Mainpage2 = () => {
         );
   
         const groupData = response.data;
+  
+        // 응답 데이터 구조 확인
         console.log('API 응답 데이터:', groupData);
   
-        if (!Array.isArray(groupData) || groupData.length === 0) {
-          console.warn('그룹 데이터가 없습니다.');
-          navigate('/Mainpage');
-          return;
-        }
+        // 응답 데이터가 배열일 경우 처리
+        if (Array.isArray(groupData) && groupData.length > 0) {
+          const firstGroup = groupData[0]; // 첫 번째 그룹 데이터 가져오기
+          setMission(firstGroup.mission); // 미션 저장
+          setGroupName(firstGroup.name); // 그룹 이름 저장
+          localStorage.setItem('groupId', firstGroup.id); // 그룹의 ID를 로컬스토리지에 저장
   
-        const group = groupData[0];
-        setGroupName(group.name);
-         localStorage.setItem('groupName', group.name); 
-        setMission(group.mission);
-        localStorage.setItem('groupId', group.id);
-  
-        const myParticipant = group.participants.find(
-          (participant) => participant.user.nickname === storedNickname
-        );
-  
-        if (myParticipant) {
-          const myId = myParticipant.user.id;
-          console.log('내 ID:', myId);
-  
-          const giverMatch = group.matches.find((match) => match.giver === myId);
-          if (giverMatch) {
-            const giverMatchId = giverMatch.id;
-            const receiverId = giverMatch.receiver;
-            localStorage.setItem('giverMatchId', giverMatchId);
-  
-            const receiverParticipant = group.participants.find(
-              (participant) => participant.user.id === receiverId
-            );
-  
-            if (receiverParticipant) {
-              const receiverNickname = receiverParticipant.user.nickname;
-              setManitoNickname(receiverNickname);
-              localStorage.setItem('ManitoNickname', receiverNickname);
-            }
-          }
-  
-          const receiverMatch = group.matches.find((match) => match.receiver === myId);
-          if (receiverMatch) {
-            const receiverMatchId = receiverMatch.id;
-            localStorage.setItem('receiverMatchId', receiverMatchId);
-          }
+          console.log('첫 번째 그룹 데이터:', firstGroup);
+          console.log('groupId:', firstGroup.id); // 저장된 ID를 콘솔에 출력
+        } else {
+          console.warn('그룹 데이터가 비어 있습니다.');
         }
       } catch (error) {
         console.error('API 요청 실패:', error);
@@ -100,8 +72,7 @@ const Mainpage2 = () => {
     };
   
     fetchGroupData();
-  }, [navigate]);
-
+  }, []);
 
   const handleNavigate = (path) => {
     navigate(path);
@@ -176,7 +147,7 @@ const Mainpage2 = () => {
         
           <styles.RowContainer4>
             <styles.LogoImage src={SantaLogo} alt="santaLogo" />
-            <styles.RowContainerText> 마니또 닉네임: {manitoNickname || '로딩 중...'}</styles.RowContainerText>
+            <styles.RowContainerText>  {nickname ? `${nickname}` : ''}</styles.RowContainerText>
           </styles.RowContainer4>
           
           <styles.BadgeContainer3>
@@ -199,7 +170,17 @@ const Mainpage2 = () => {
           </styles.Item2> {/* mission 데이터가 없다면 기본 메시지 표시 */}
 
 
-      
+          <styles.Item2 onClick={BeforeMatching}>
+        <styles.SantaImage src={Santaman} alt="BallImage" />
+          <styles.BadgeContainer2 >
+         
+            <styles.BadgeText2  >
+              매칭대기중
+            </styles.BadgeText2>
+          </styles.BadgeContainer2>
+        </styles.Item2>
+{/* 
+
         <styles.Item3 onClick={BeforeMatching}>
          <styles.BadgeContainer4>
           <styles.BadgeText4>
@@ -214,8 +195,7 @@ const Mainpage2 = () => {
          
    
           
-        </styles.Item3>
-        
+        </styles.Item3> */}
         
         {/* 필요한 만큼 Item 추가 */}
       </styles.DragScrollContainer>
@@ -223,5 +203,6 @@ const Mainpage2 = () => {
   );
 };
 
-export default Mainpage2;
+export default Mainpage3;
+ 
  

@@ -42,7 +42,7 @@ const Mainpage = () => {
         <styles.RowContainer>
         <styles.CenteredImage src={LogoImage} alt="LogoImage" />
            
-          <styles.TitleText onClick={handleNavigateTree} style={{ cursor: 'pointer' }}>나의 트리 보러가기</styles.TitleText>
+          <styles.TitleText onClick={handleNavigateTree} style={{ cursor: 'pointer' }}>{nickname ? `${nickname}트리 보러가기` : '트리 보러가기'}</styles.TitleText>
         </styles.RowContainer>
 
          
@@ -56,7 +56,7 @@ const Mainpage = () => {
         <styles.RowContainer>
         <styles.TitleText3>마니또 트리를 시작해보세요!</styles.TitleText3>
         <styles.MiniContainer>
-        <styles.MiniText>🎁튜토리얼</styles.MiniText>  
+        <styles.MiniText>🎁 튜토리얼</styles.MiniText>  
         </styles.MiniContainer>
         </styles.RowContainer>
         <styles.RowContainer>
