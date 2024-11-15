@@ -14,6 +14,7 @@ import CloseIcon from '../../assets/img/join/x.svg';
 const Mainpage = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
   const navigate = useNavigate();
+  const [nickname, setNickname] = useState('');
 
   // 페이지 이동 함수
   const handleNavigate = () => {
@@ -29,12 +30,26 @@ const Mainpage = () => {
   };
 
   const togglePopup = () => {
-    setIsPopupVisible(!isPopupVisible); // 수정된 부분
+    setIsPopupVisible(!isPopupVisible); 
+    // 팝업을 닫을 때 localStorage에 값 설정
+    if (isPopupVisible) {
+      localStorage.setItem('tutorialSeen', 'true');
+    }
   };
 
   useEffect(() => {
-    // 페이지 로드 시 팝업을 표시하도록 설정
-    setIsPopupVisible(true); // 수정된 부분
+    // 페이지 최초 로드 시 localStorage에 저장된 튜토리얼 표시 여부 확인
+    const tutorialSeen = localStorage.getItem('tutorialSeen');
+    if (!tutorialSeen) {
+      setIsPopupVisible(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    const storedNickname = localStorage.getItem('nickname');
+    if (storedNickname) {
+      setNickname(storedNickname);
+    }
   }, []);
 
   return (
@@ -90,7 +105,7 @@ const Mainpage = () => {
 
       <styles.Divider />
       <styles.RowContainer2>
-        <styles.TitleText3>고승범 산타의 마니또</styles.TitleText3>
+        <styles.TitleText3>{nickname ? `${nickname} 산타의 마니또` : '산타의 마니또'}</styles.TitleText3>
         <CountdownBadge />
       </styles.RowContainer2>
 
