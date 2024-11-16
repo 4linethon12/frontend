@@ -71,7 +71,7 @@ width: 50px;
   height: 50px;
   background-color: rgba(255, 0, 0, 0.0); /* 테스트용 배경색 */
   position: absolute; /* 부모인 CenteredImage 기준으로 배치 */
-  top: 70%; /* 부모 높이의 50% */
+  top: 50%; /* 부모 높이의 50% */
   left: 25%; /* 부모 너비의 50% */
   transform: translate(-50%, -50%); /* 정확히 가운데 정렬 */
  
@@ -82,7 +82,7 @@ width: 70px;
   height: 50px;
   background-color: rgba(255, 0, 0, 0.5); /* 테스트용 배경색 */
   position: absolute; /* 부모인 CenteredImage 기준으로 배치 */
-  top: 30%; /* 부모 높이의 50% */
+  top: 70%; /* 부모 높이의 50% */
   left: 47%; /* 부모 너비의 50% */
   transform: translate(-50%, -50%); /* 정확히 가운데 정렬 */
  
