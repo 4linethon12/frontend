@@ -64,6 +64,15 @@ export const ContainerImage = styled.img`
   
 `;
 
+export const setContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+
 export const StyledButton = styled.button`
   width: 110px;
   height: 30px;

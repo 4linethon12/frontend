@@ -2,7 +2,7 @@ import { useState } from 'react';
 import * as styles from '../../style/ManittoPage/BackGround';
 import * as style from '../../style/ManittoPage/MakeGroupPage';
 import Input from '../../component/manittoo/Input'; 
-import Button from '../../component/manittoo/Button';
+import Button from '../../component/manittoo/GroupButton';
 import { useNavigate } from 'react-router-dom';
 import CloseImage from '/images/Group/x.png';
  
@@ -27,6 +27,8 @@ const MakeGroupPage = () => {
     const handleGroupNameChange = (event) => {
         setGroupNameLocal(event.target.value);
     };
+
+    const isButtonActive = groupName.trim().length > 0 && groupName.trim().length <= 10;
 
     return (
         <styles.MainBackground>
@@ -65,7 +67,9 @@ const MakeGroupPage = () => {
                 </style.TitleText4>
                 
                
-                <Button onClick={handleNextClick} marginTop="100%">다음</Button>
+                <Button 
+                mission={isButtonActive}
+                onClick={handleNextClick} marginTop="100%">다음</Button>
             </style.EmptyContainer>
         </styles.MainBackground>
     );

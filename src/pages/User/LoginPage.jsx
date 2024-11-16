@@ -24,7 +24,7 @@ const LoginPage = () => {
       await login(nickname, password); // 서버에 로그인 요청
       dispatch(setNickname(nickname)); // Redux에 닉네임 저장
       localStorage.setItem('nickname', nickname); // 닉네임을 로컬 스토리지에도 저장
-      navigate('/Mainpage2'); // 메인 페이지로 이동
+      navigate('/MainPage'); // 메인 페이지로 이동
     // eslint-disable-next-line no-unused-vars
     } catch (error) {
       alert('로그인 실패: 아이디 또는 비밀번호를 확인하세요');

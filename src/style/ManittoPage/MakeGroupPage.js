@@ -45,8 +45,7 @@ export const ProgressBarFill = styled.div`
 export const CenteredImage = styled.img`
   width:  30px; /* 필요한 크기로 조정 */
   height: 30px;
-   margin-left: auto;
-  margin-right: 5%;
+  margin-left: 90%;
 `;
 export const CenteredImage2 = styled.img`
   width:  30px; /* 필요한 크기로 조정 */
