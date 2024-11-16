@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const MainContainer = styled.div`
   background-image: url('/images/Letter/LetterBack.png');
-  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
@@ -23,10 +22,11 @@ export const ContentContainer = styled.div`
 `;
 
 export const highContainer = styled.div`
-  width: 375px;
+  width: 355px;
   height: 50px;
-  margin: 1rem 0;
+  margin: 10px;
   display: flex;
+  align-items: end;
   flex-direction: column;
 `;
 
@@ -38,17 +38,22 @@ export const RightImage = styled.img`
 `;
 
 export const TitleText2 = styled.h1`
+  width: 375px;
+  display: flex;
+  flex-direction: column;
   font-family: "CAFE24";
   font-weight: bold;
   font-size: 32px;
   color: white;
   margin-bottom: 20px;
+  text-align: left;
+  margin-left: 50px;
 `;
 
 export const LetterWrapper = styled.div`
   position: relative; /* 부모 위치 설정 */
-  width: 264px; /* 이미지 크기 */
-  height: 329px;
+  width: 400px; /* 이미지 크기 */
+  height: 400px;
 `;
 
 export const ContainerImage = styled.img`
@@ -72,10 +77,11 @@ export const LetterText = styled.div`
 `;
 
 export const SenderText = styled.p`
-   font-family: "SUITE", sans-serif;
+  font-family: "SUITE", sans-serif;
   font-weight: bold; /* Weight */
   font-size: 14px;
   color: black;
+
 `;
 
 export const ReceiverText = styled.p`

@@ -72,7 +72,7 @@ const Letter = () => {
             onClick={() => navigate('/TreeManito')}
           />
         </style.highContainer>
-        <style.TitleText2>Letter from Manito</style.TitleText2>
+        <style.TitleText2>Letter from <br/> Manito</style.TitleText2>
 
         {/* 편지 이미지와 내용 */}
         <style.LetterWrapper>
