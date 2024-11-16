@@ -28,7 +28,7 @@ const MakeGroupPage = () => {
         setGroupNameLocal(event.target.value);
     };
 
-    const isButtonActive = groupName.trim().length > 0 && groupName.trim().length < 10;
+    const isButtonActive = groupName.trim().length > 0 && groupName.trim().length <= 10;
 
     return (
         <styles.MainBackground>
