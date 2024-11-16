@@ -56,6 +56,9 @@ const Mainpage = () => {
   const goToTest = () => {
     navigate('/teststart')
  };
+ const BeforeMatching = () => {
+  navigate('/BeforeMatching');
+}; 
 
   return (
     <styles.MainBackground>
@@ -119,7 +122,7 @@ const Mainpage = () => {
         <CountdownBadge />
       </styles.RowContainer2>
 
-      <styles.BottomContainer>
+      <styles.BottomContainer onClick={BeforeMatching}>
         <styles.Image2 src={Santaman} alt="SantaImage" />
         <styles.BadgeContainer>
           <styles.BadgeText>마니또 매칭 대기중이에요!</styles.BadgeText>
