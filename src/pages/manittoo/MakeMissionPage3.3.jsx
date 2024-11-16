@@ -19,7 +19,7 @@ const MakeMissionPage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    useEffect(() => {
+
         const storedMission = localStorage.getItem('mission') || '';
         setLocalMission(storedMission); // localStorage에서 미션을 가져와서 상태 초기화
     }, []);

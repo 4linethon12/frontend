@@ -52,26 +52,23 @@ const Join = () => {
         <p className="hi">반가워요! <br /> 어떻게 불러드리면 될까요?</p>
 
         <p className="join_text">닉네임</p>
-        <input
-          type="text"
-          className="id"
-          placeholder="닉네임"
-          value={nickname}
-          onChange={handleChange}
-        />
-        {/* 유효성 아이콘 조건부 렌더링 */}
-        {nickname.length > 0 && (
-          <img
-            src={isValid ? IconCheck : IconX}
-            alt="유효성 아이콘"
-            style={{
-              position: 'absolute',
-              right: '46px',
-              top: '31%',
-              transform: 'translateY(-50%)',
-            }}
+        <div className="input_area" style={{ position: 'relative' }}>
+          <input
+            type="text"
+            className="id"
+            placeholder="닉네임"
+            value={nickname}
+            onChange={handleChange}
           />
-        )}
+          {/* 유효성 아이콘 조건부 렌더링 */}
+          {nickname.length > 0 && (
+            <img
+              src={isValid ? IconCheck : IconX}
+              alt="유효성 아이콘"
+              style={{ position: 'absolute', right: '11px', top: '37px', transform: 'translateY(-50%)' }}
+            />
+          )}`
+        </div>
         <div className="alert">
           <p className="join_alert">{message}</p>
           <p className="join_alert">({charCount}/8)</p>
