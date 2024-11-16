@@ -38,10 +38,10 @@ const Icon = styled.img`
   pointer-events: none; /* 클릭 이벤트 방지 */
 `;
 
-const Input = ({ type = 'text', placeholder, value, onChange }) => {
+const Input = ({ placeholder, value, onChange }) => {
   // 조건에 따른 아이콘 설정
   let icon;
-  if (value.length >= 10) {
+  if (value.length > 16) {
     icon = SuccessIcon; // 조건을 만족하면 성공 아이콘
   } else if (value.length > 0) {
     icon = ErrorIcon; // 조건에 맞지 않으면 에러 아이콘
@@ -52,7 +52,7 @@ const Input = ({ type = 'text', placeholder, value, onChange }) => {
   return (
     <InputContainer>
       <StyledInput 
-        type={type} 
+        type="text" 
         placeholder={placeholder} 
         value={value} 
         onChange={onChange} 
@@ -61,7 +61,6 @@ const Input = ({ type = 'text', placeholder, value, onChange }) => {
     </InputContainer>
   );
 };
-
 
 // PropTypes 설정
 Input.propTypes = {

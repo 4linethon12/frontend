@@ -35,7 +35,7 @@
   .top_text {
     color: #FFF;
     text-align: center;
-    margin-top: 27px;
+    margin-top: 43px;
     font-family: SUITE;
     font-size: 14px;
     font-style: normal;
@@ -83,7 +83,6 @@
     cursor: pointer;
     margin-top: 129px;
   }
-
 .bar {
     width: 375px;
     height: 4px;

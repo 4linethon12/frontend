@@ -1,14 +1,12 @@
 import axios from 'axios';
 
-const createGroupWithMission = async (groupName, nickname, mission) => {
+const createGroupWithMission = async (groupName, mission) => {
     const token = localStorage.getItem('token'); // 토큰 가져오기
 
     const requestData = {
         name: groupName,
         mission: mission,
-        group_leader: {
-            nickname: nickname,
-        },
+
     };
 
     console.log("전송 데이터:", requestData); // 요청 데이터 디버깅

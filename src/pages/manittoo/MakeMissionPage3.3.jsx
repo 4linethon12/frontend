@@ -1,9 +1,8 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import * as styles from '../../style/ManittoPage/BackGround';
 import * as style from '../../style/ManittoPage/MakeMissionPage';
-import Input from '../../component/manittoo/Input';
-import Button from '../../component/manittoo/Button';
+import Input from '../../component/manittoo/MissonInput';
+import Button from '../../component/manittoo/GroupButton';
 import Modal from '../../component/manittoo/Modal';
 import { useNavigate } from 'react-router-dom';
 import CloseImage from '/images/Group/x.png';
@@ -14,20 +13,22 @@ import { setMission, setCode } from '../../redux/userSlice';
 
 const MakeMissionPage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [groupName, setGroupName] = useState('');
+    const [localMission, setLocalMission] = useState(''); // 로컬 상태로 관리
+    const groupName = useSelector((state) => state.user.groupName); // 그룹명도 Redux에서 가져오고 있다면
     const mission = useSelector((state) => state.user.mission); // Redux 상태에서 미션 가져오기
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     useEffect(() => {
-        const storedGroupName = localStorage.getItem('groupName') || '';
-        setGroupName(storedGroupName);
+        const storedMission = localStorage.getItem('mission') || '';
+        setLocalMission(storedMission); // localStorage에서 미션을 가져와서 상태 초기화
     }, []);
 
     const nickname = localStorage.getItem('nickname');
 
     const handleMissionChange = (event) => {
         const newMission = event.target.value;
+        setLocalMission(newMission); // 로컬 상태 업데이트
         dispatch(setMission(newMission)); // Redux 상태 업데이트
         localStorage.setItem('mission', newMission); // 로컬 스토리지에 저장
     };
@@ -41,7 +42,7 @@ const MakeMissionPage = () => {
     const handleCreateRequest = async () => {
         try {
             const currentMission = mission || localStorage.getItem('mission');
-            const { code } = await createGroupWithMission(groupName, nickname, currentMission);
+            const { code } = await createGroupWithMission(nickname, currentMission);
             dispatch(setCode(code));
             navigate('/GroupComplete');
         } catch (error) {
@@ -59,54 +60,66 @@ const MakeMissionPage = () => {
     const handleClickBack = () => navigate('/MakeGroup');
     const handleClickClose = () => navigate('/MainPage');
 
+    // 버튼 활성화 조건 수정
+    const isButtonActive = localMission.trim().length > 0 && localMission.trim().length <= 16;
+
     return (
         <styles.MainBackground>
             <style.highContainer>
-                <style.RowContainer>
-                    <style.CenteredImage
-                        src={chervon}
-                        alt="chervon"
-                        onClick={handleClickBack}
-                        style={{ cursor: 'pointer' }}
-                    />
-                    <style.CenteredImage
-                        src={CloseImage}
-                        alt="CloseImage"
-                        onClick={handleClickClose}
-                        style={{ cursor: 'pointer' }}
-                    />
-                </style.RowContainer>
-                <style.ProgressBarContainer>
-                    <style.ProgressBarFill style={{ width: `${100}%` }} />
-                </style.ProgressBarContainer>
+                <style.CancelContainer>
+                    <style.RowContainer>
+                        <style.CenteredImage
+                            src={chervon}
+                            alt="chervon"
+                            onClick={handleClickBack}
+                            style={{ cursor: 'pointer' }}
+                        />
+                        <style.CenteredImage
+                            src={CloseImage}
+                            alt="CloseImage"
+                            onClick={handleClickClose}
+                            style={{ cursor: 'pointer' }}
+                        />
+                    </style.RowContainer>
+                </style.CancelContainer>
+                <style.ProgressContainer>
+                    <style.ProgressBarContainer>
+                        <style.ProgressBarFill style={{ width: `${100}%` }} />
+                    </style.ProgressBarContainer>
+                </style.ProgressContainer>
             </style.highContainer>
             <style.EmptyContainer>
-                <style.TitleText margin="10px">미션 만들기</style.TitleText>
+                <style.TitleText>미션 만들기</style.TitleText>
                 <style.TitleText2>
                     흥미진진한 마니또 게임을 위해 미션을 추가해 봐요!
                 </style.TitleText2>
-                <style.TitleText3 margin="5%">
+                <style.TitleText3>
                     미션
                 </style.TitleText3>
 
                 <Input
                     placeholder="미션 입력"
-                    value={mission} // Redux 상태로 연결
+                    value={localMission} // 로컬 상태와 연결
                     onChange={handleMissionChange}
                     maxLength={16} // 최대 16글자 제한
                 />
-                <style.TitleText3 margin="5%">
+                <style.TitleText5>
                     미션은 최대 16자리까지 입력 가능해요{' '}
-                    <span style={{ marginLeft: '10px', color: '#333', fontSize: '14px' }}>
-                        ({mission.length}/16)
+                    <span>
+                        ({localMission.length}/16)
                     </span>
-                </style.TitleText3>
+                </style.TitleText5>
 
                 <style.TitleText4 onClick={openModal} style={{ cursor: 'pointer' }}>
                     미션 추천 받을래요!
                 </style.TitleText4>
 
-                <Button onClick={handleCreateRequest}>다음</Button>
+                <Button 
+                    mission={isButtonActive}
+                    onClick={handleCreateRequest}
+                >
+                    다음
+                </Button>
             </style.EmptyContainer>
 
             {isModalOpen && (

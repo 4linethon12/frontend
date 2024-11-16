@@ -19,7 +19,7 @@ const TestStart = () => {
     <div className='test_start_wrap'>
         <div className='single_cancel' onClick={goToMainPage}><img src={cancel} alt='취소'/></div>
 
-        <p className='top_text'>친구 산타가 알려 준</p>
+        <p className='top_text'>산타가 알려 준</p>
         <p className='testext'>선물 포장지 속<br />당신의 진짜 모습은?</p>
         <img src={snowball} className='snowball' alt='snowball' />
 

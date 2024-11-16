@@ -1,11 +1,10 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'; // axios import
 import * as styles from '../../style/ManittoPage/BackGround';
 import * as style from '../../style/ManittoPage/MakeGroupPage';
 import Input from '../../component/manittoo/Input'; // Input 컴포넌트 import
-import Button from '../../component/manittoo/Button';
+import Button from '../../component/manittoo/GroupButton';
 import chervon from '/images/Mission/x.png';
 
 const JoinGroupPage = () => {
@@ -53,22 +52,29 @@ const JoinGroupPage = () => {
         }
     };
 
+    // 버튼 활성화 조건 수정
+    const isButtonActive = inputCode.trim().length > 0; // inputCode가 비어있지 않으면 활성화
+
     return (
         <styles.MainBackground>
             <style.highContainer>
+            <style.CancelContainer> 
                 <style.CenteredImage src={chervon} alt="chervon"
                     onClick={() => navigate('/MainPage2')} // 뒤로 가는 버튼 처리
                     style={{ cursor: 'pointer' }}  
                 />
+            </style.CancelContainer>
+            <style.ProgressContainer>
                 <style.ProgressBarContainer>
                     <style.ProgressBarFill style={{ width: '50%' }} />
                 </style.ProgressBarContainer>
+            </style.ProgressContainer>
             </style.highContainer>
+            
 
             <style.EmptyContainer>
                 <style.TitleText margin="10px">그룹 입장하기</style.TitleText>
-                <style.TitleText2>입장 코드를 입력하고 그룹에 입장해서</style.TitleText2>
-                <style.TitleText2> 함께 마니또를 찾아봐요!</style.TitleText2>
+                <style.TitleText2>입장 코드를 입력하고 그룹에 입장해서 <br/> 함께 마니또를 찾아봐요!</style.TitleText2>
 
                 <style.TitleText3 margin="10px">입장 코드</style.TitleText3>
 
@@ -79,7 +85,14 @@ const JoinGroupPage = () => {
                     onChange={handleInputCodeChange} 
                 />
 
-                <Button onClick={handleSubmitCode} marginTop="100%">다음</Button>
+                <Button 
+                mission={isButtonActive} // 버튼 활성화 조건
+                onClick={handleSubmitCode} 
+                marginTop="110%"
+                disabled={!isButtonActive} // isButtonActive가 false일 경우 버튼 비활성화
+                >
+                    다음
+                </Button>
             </style.EmptyContainer>
         </styles.MainBackground>
     );
