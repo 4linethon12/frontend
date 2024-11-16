@@ -19,7 +19,7 @@ export const EmptyContainer = styled.div`
   width: 320px;
   height: 530px;
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
-  border: 2px solid rgba(204, 204, 204, 0.3); /* 반투명한 테두리 */
+  border: 2px solid rgba(204, 204, 204, 0.); /* 반투명한 테두리 */
   border-radius: 8px;
   margin: 1rem 0;
   display: flex;
