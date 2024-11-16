@@ -1,17 +1,41 @@
+// TreeManito.js
 // eslint-disable-next-line no-unused-vars
 import { useNavigate } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import * as style from '../../style/TreePage/TreeMinatostyle';
+import styled from 'styled-components';
 import treeImage from '/images/Tree.png';
-import LogoImage from '/images/mainpage/Sub.png';
+import ShiningLogo from '/images/ShiningLogo.png';
 import hintImage1 from '/images/treegift/1.png';
 import hintImage2 from '/images/treegift/3.png';
 import hintImage3 from '/images/treegift/4.png';
 import hintImage4 from '/images/treegift/2.png';
 import hintImage5 from '/images/treegift/5.png';
-// import LetterImage5 from '/images/treegift/5.png'; // 레터 이미지 추가
 import axios from 'axios';
+
+// 동적으로 위치를 설정하는 함수
+const getHintPosition = (index) => {
+  const positions = [
+    { top: '50%', left: '40%' }, // Hint 1
+    { top: '65%', left: '50%' }, // Hint 2
+    { top: '50%', left: '65%' }, // Hint 3
+    { top: '70%', left: '25%' }, // Hint 4
+    { top: '75%', left: '60%' }, // Hint 5
+  ];
+  return positions[index] || { top: '50%', left: '50%' }; // 기본값
+};
+
+// 동적으로 위치와 스타일을 적용하는 컴포넌트
+const DynamicHintImage = styled.div`
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.0); /* 테스트용 배경색 */
+  position: absolute; /* 부모 기준으로 배치 */
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  transform: translate(-50%, -50%); /* 정확히 가운데 정렬 */
+`;
 
 const TreeManito = () => {
   const navigate = useNavigate();
@@ -62,17 +86,12 @@ const TreeManito = () => {
 
     fetchHints();
   }, [token, groupId]);
-  
-
-  // 힌트에 사용할 이미지와 텍스트 매핑
-  // const hintImages = [hintImage1, hintImage2, hintImage3, hintImage4];
-  // const hintTexts = ['1st 힌트', '2nd 힌트', '3rd 힌트', 'Last 힌트'];
 
   return (
     <style.MainContainer>
       <style.EmptyContainer>
         <style.RowContainer1>
-          <style.CenteredImage2 src={LogoImage} alt="LogoImage" />
+          <style.LogoImage src={ShiningLogo}></style.LogoImage>
           <style.TitleText onClick={handleNavigateMain} style={{ cursor: 'pointer' }}>
             메인으로 돌아가기
           </style.TitleText>
@@ -88,25 +107,30 @@ const TreeManito = () => {
       </style.EmptyContainer>
 
       <style.TreeContainer>
-  <style.CenteredImage src={treeImage} alt="Tree Image" />
-  {hints.map((hint, index) => (
-    <style.CenteredImage2
-      key={hint.id}
-      onClick={() =>
-        navigate('/HintCheck', {
-          state: { hintText: hint.hint, hintIndex: index + 1 },
-        })
-      }
-    >
-      <style.HintText>{`${index + 1}st 힌트`}</style.HintText>
-      {index === 0 && <style.hint_1 src={hintImage1} alt="힌트 1" />}
-      {index === 1 && <style.hint_2 src={hintImage2} alt="힌트 2" />}
-      {index === 2 && <style.hint_3 src={hintImage3} alt="힌트 3" />}
-      {index === 3 && <style.hint_4 src={hintImage4} alt="힌트 4" />}
-      {index === 4 && <style.hint_5 src={hintImage5} alt="힌트 5" />}
-    </style.CenteredImage2>
-  ))}
-</style.TreeContainer>
+        <style.CenteredImage src={treeImage} alt="Tree Image" />
+        {hints.map((hint, index) => {
+          const position = getHintPosition(index); // 위치 계산
+          return (
+            <DynamicHintImage
+              key={hint.id}
+              top={position.top}
+              left={position.left}
+              onClick={() =>
+                navigate('/HintCheck', {
+                  state: { hintText: hint.hint, hintIndex: index + 1 },
+                })
+              }
+            >
+              <style.HintText>{`${index + 1}st 힌트`}</style.HintText>
+              {index === 0 && <img src={hintImage1} alt="힌트 1" />}
+              {index === 1 && <img src={hintImage2} alt="힌트 2" />}
+              {index === 2 && <img src={hintImage3} alt="힌트 3" />}
+              {index === 3 && <img src={hintImage4} alt="힌트 4" />}
+              {index === 4 && <img src={hintImage5} alt="힌트 5" />}
+            </DynamicHintImage>
+          );
+        })}
+      </style.TreeContainer>
     </style.MainContainer>
   );
 };

@@ -23,12 +23,12 @@ export const EmptyContainer = styled.div`
   width: 320px;
   height: 150px;
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
-  border: 2px solid rgba(204, 204, 204, 0.3); /* 반투명한 테두리 */
+  border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
   border-radius: 8px;
-   
+  
   display: flex;
   flex-direction: column;
-  margin-top: 30%;
+  margin-top: 15%;
 `;
 
 export const CenteredImage2 = styled.div`
@@ -171,6 +171,12 @@ export const BadgeText = styled.div`
   font-family: 'SUITE';
   font-weight: 600;
   text-align: center;
+`;
+export const LogoImage = styled.img`
+  width: 190px; /* 필요한 크기로 조정 */
+  height: 60px;
+  margin-left: -8%;
+ 
 `;
 export const CenteredImage = styled.div`
  width: 300px; /* 트리 이미지 크기 */

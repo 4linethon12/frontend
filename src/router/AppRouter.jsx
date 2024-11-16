@@ -49,6 +49,7 @@ function AppRouter() {
         <Route path="/HomePage" element={<HomePage />} />
         <Route path="/Mainpage0" element={<Mainpage0 />} />
         <Route path="/MainPage" element={<Mainpage />} />
+        <Route path="/MainPage1" element={<Mainpage2 />} />
         <Route path="/Mainpage2" element={<Mainpage2 />} />
         <Route path="/Mainpage3" element={<Mainpage3 />} />
      
