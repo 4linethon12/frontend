@@ -60,15 +60,7 @@ const Subtitle = styled.p`
   margin: 5px 20px;
 `;
 
-const RefreshIcon = styled.div`
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 1.2rem;
-  color: #2d4632;
-  cursor: pointer;
-`;
-
+ 
 const ButtonList = styled.div`
   display: flex;
   flex-direction: column;
@@ -94,7 +86,7 @@ const Button = styled.button`
   }
 `;
 
-const Modal = ({ onClose, onRefresh, onMissionSelect }) => {
+const Modal = ({ onClose,  onMissionSelect }) => {
   const [startY, setStartY] = useState(0);
 
   // 터치 시작 위치를 저장
@@ -118,15 +110,14 @@ const Modal = ({ onClose, onRefresh, onMissionSelect }) => {
         onTouchEnd={handleTouchEnd}
       >
         <Handle /> {/* 모달 상단에 핸들 추가 */}
-        <RefreshIcon onClick={onRefresh}>🔄</RefreshIcon>
         <Title>생각나는 미션이 없다면</Title>
         <Subtitle>크리스마또가 추천해드릴게요!</Subtitle>
         <ButtonList>
-        <Button onClick={() => onMissionSelect('마니또가 좋아하는 음료 사주기')}>마니또가 좋아하는 음료 사주기</Button>
-          <Button onClick={() => onMissionSelect('마니또한테 캐롤 추천해주기')}>마니또한테 캐롤 추천해주기</Button>
-          <Button onClick={() => onMissionSelect('마니또랑 같이 밥 먹기')}>마니또랑 같이 밥 먹기</Button>
-          <Button onClick={() => onMissionSelect('마니또한테 크리스마스 영화 추천해주기')}>마니또한테 크리스마스 영화 추천해주기</Button>
-          <Button onClick={() => onMissionSelect('마니또랑 같이 사진 찍기')}>마니또랑 같이 사진 찍기</Button>
+        <Button onClick={() => onMissionSelect('마니또랑 스키타고 라면먹기')}>마니또랑 스키타고 라면먹기</Button>
+          <Button onClick={() => onMissionSelect('마니또랑 트리 장식하기')}>마니또랑 트리 장식하기</Button>
+          <Button onClick={() => onMissionSelect('마니또랑 겨울 바다 보러가기')}>마니또랑 겨울 바다 보러가기</Button>
+          <Button onClick={() => onMissionSelect('마니또 가방에 선물 넣어놓기')}>마니또 가방에 선물 넣어놓기</Button>
+          <Button onClick={() => onMissionSelect('마니또랑 트리 앞에서 사진찍기')}>마니또랑 트리 앞에서 사진찍기</Button>
         </ButtonList>
       </ModalContainer>
     </ModalOverlay>
