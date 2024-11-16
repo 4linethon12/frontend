@@ -41,7 +41,7 @@ const Icon = styled.img`
 const Input = ({ type = 'text', placeholder, value, onChange }) => {
   // 조건에 따른 아이콘 설정
   let icon;
-  if (value.length >= 10) {
+  if (value.length > 10) {
     icon = SuccessIcon; // 조건을 만족하면 성공 아이콘
   } else if (value.length > 0) {
     icon = ErrorIcon; // 조건에 맞지 않으면 에러 아이콘

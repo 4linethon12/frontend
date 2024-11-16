@@ -101,7 +101,7 @@ const MakeMissionPage = () => {
 
                 <Input
                     placeholder="미션 입력"
-                    value={localMission} // 로컬 상태와 연결
+                    value={mission} // 로컬 상태와 연결
                     onChange={handleMissionChange}
                     maxLength={16} // 최대 16글자 제한
                 />
