@@ -8,7 +8,7 @@ const TestStart = () => {
   const navigate = useNavigate();
 
   const goToMainPage = () => {
-    navigate('/MainPage');
+    navigate('/MainPage2');
   };
   
   const goToTestMain = () => {
