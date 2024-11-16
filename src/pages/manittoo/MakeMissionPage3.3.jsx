@@ -19,9 +19,10 @@ const MakeMissionPage = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-
+    // useEffect를 통해 로컬 스토리지 값 초기화
+    useEffect(() => {
         const storedMission = localStorage.getItem('mission') || '';
-        setLocalMission(storedMission); // localStorage에서 미션을 가져와서 상태 초기화
+        setLocalMission(storedMission); // 로컬 상태 초기화
     }, []);
 
     const groupName = localStorage.getItem('groupName');
@@ -53,6 +54,7 @@ const MakeMissionPage = () => {
 
     const closeModal = () => setIsModalOpen(false);
     const openModal = () => setIsModalOpen(true);
+
     const refreshModal = () => {
         alert('미션 목록이 새로고침되었습니다!');
     };
