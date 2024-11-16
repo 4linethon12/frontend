@@ -128,8 +128,8 @@ const Mainpage2 = () => {
     navigate('/TreeManito');
   }; 
 
-  const BeforeMatching = () => {
-    navigate('/BeforeMatching');
+  const GroupCompletePage = () => {
+    navigate('/GroupCompletePage');
   }; 
 
   // const WriteHintPages = () => {
@@ -229,7 +229,7 @@ const Mainpage2 = () => {
         
 
       
-        <styles.Item3 onClick={BeforeMatching}>
+        <styles.Item3 onClick={GroupCompletePage}>
          <styles.BadgeContainer4>
           <styles.BadgeText4>
               매칭완료

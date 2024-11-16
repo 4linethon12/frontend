@@ -12,12 +12,20 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const BeforeTree = () => {
+  const [manitoName, setManitoName] = useState(''); // 마니또 이름 상태
   const navigate = useNavigate();
   const [hints, setHints] = useState([]); // 힌트 데이터를 저장하는 상태
   const token = localStorage.getItem('token'); // 로컬스토리지에서 토큰 가져오기
 
   useEffect(() => {
+    const storedManitoName = localStorage.getItem('ManitoNickname') || '마니또 이름 없음';
+
+    setManitoName(storedManitoName);
+
+    
     const fetchHints = async () => {
+
+
       try {
         const response = await axios.get(
           `http://43.201.50.47:8000/api/messages/messages/for-giver`, // API URL
@@ -62,7 +70,7 @@ const BeforeTree = () => {
       </style.highContainer>
       <style.EmptyContainer>
         <style.RowContainer2>
-          <style.TitleText3>황민영</style.TitleText3>
+          <style.TitleText3>{manitoName}</style.TitleText3>
           <style.TitleText4>산타의 마니또 트리</style.TitleText4>
         </style.RowContainer2>
         <style.TreeContainer>
