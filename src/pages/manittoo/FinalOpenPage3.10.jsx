@@ -1,9 +1,22 @@
 import * as style from '../../style/ManittoPage/FinalOpenstyle';
-
+import CloseImage from '/images/Group/x.png';
+import { useNavigate } from 'react-router-dom';
  
 const FinalOpenPage = () => {
+
+  const handleClickBack = () => navigate('/Mainpage3');
+  const navigate = useNavigate();
+
   return (
     <style.MainContainer>
+      <style.RowContainer>
+      <style.CenteredImage
+                            src={CloseImage}
+                            alt="CloseImage"
+                            onClick={handleClickBack}
+                            style={{ cursor: 'pointer' }}
+                        />
+                        </style.RowContainer>
    <style.EmptyContainer>
    <style.TitleText2>Merry Chrismato</style.TitleText2>
    <style.TitleText margin='10px 0px'>크리스마스의 비밀이 풀리는 순간,</style.TitleText>
