@@ -24,7 +24,6 @@ export const EmptyContainer = styled.div`
  
 `;
 
-
 export const TitleText3 = styled.h1`
   font-family: "SUITE", sans-serif;
   font-weight: bold; /* Weight */
@@ -59,13 +58,7 @@ export const TitleText4 = styled.h1`
   
 `;
 
-export const HintText = styled.h1`
-  font-family: "SUITE", sans-serif;
-  font-weight: bold; /* Weight */
-  font-size: 12px;
-  color: white;
-  
-`;
+ 
 
 export const RowContainer1 = styled.div`
   display: flex;
@@ -109,6 +102,14 @@ export const hint_4 = styled.img`
   top: 70%;
   left: 45%;
 `;
+export const hint_5 = styled.img`
+   position: absolute;
+  top: 60%;
+  left: 25%;
+  width: 80px;
+  height: 80px;
+`;
+
 export const TreeContainer = styled.div`
 position: relative; /* 힌트를 트리 위에 배치하기 위해 relative 설정 */
 width: 300px; /* 트리 이미지 크기 */
@@ -122,7 +123,72 @@ export const HintContainer = styled.div`
   left: ${({ left }) => left || '0%'};
   display: flex;
   flex-direction: column;
-  width: 70px; /* 이미지 크기에 맞춰 조정 */
+  width: 120px; /* 이미지 크기에 맞춰 조정 */
   height: 70px; /* 이미지 크기에 맞춰 조정 */
   
+`;
+
+export const CenteredImage2 = styled.div`
+ width: 60px; /* hint_1 크기와 동일하게 설정 */
+  height: 43px; /* hint_1 크기와 동일하게 설정 */
+  background-color: rgba(255, 0, 0, 0.0); /* 테스트용 배경색 */
+  position: absolute; /* 부모인 CenteredImage 기준으로 배치 */
+  top: 50%; /* 부모 높이의 50% */
+  left: 40%; /* 부모 너비의 40% */
+  transform: translate(-50%, -50%); /* 정확히 가운데 정렬 */
+  
+ 
+`;
+
+export const CenteredImage3 = styled.div`
+width: 50px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.0); /* 테스트용 배경색 */
+  position: absolute; /* 부모인 CenteredImage 기준으로 배치 */
+  top: 65%; /* 부모 높이의 50% */
+  left: 50%; /* 부모 너비의 50% */
+  transform: translate(-50%, -50%); /* 정확히 가운데 정렬 */
+ 
+`;
+
+export const CenteredImage4 = styled.div`
+width: 50px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.0); /* 테스트용 배경색 */
+  position: absolute; /* 부모인 CenteredImage 기준으로 배치 */
+  top: 50%; /* 부모 높이의 50% */
+  left: 65%; /* 부모 너비의 50% */
+  transform: translate(-50%, -50%); /* 정확히 가운데 정렬 */
+ 
+`;
+
+export const CenteredImage5 = styled.div`
+width: 50px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.0); /* 테스트용 배경색 */
+  position: absolute; /* 부모인 CenteredImage 기준으로 배치 */
+  top: 70%; /* 부모 높이의 50% */
+  left: 25%; /* 부모 너비의 50% */
+  transform: translate(-50%, -50%); /* 정확히 가운데 정렬 */
+ 
+`;
+
+export const CenteredImage6 = styled.div`
+width: 70px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.5); /* 테스트용 배경색 */
+  position: absolute; /* 부모인 CenteredImage 기준으로 배치 */
+  top: 30%; /* 부모 높이의 50% */
+  left: 47%; /* 부모 너비의 50% */
+  transform: translate(-50%, -50%); /* 정확히 가운데 정렬 */
+ 
+`;
+
+export const HintText = styled.h1`
+  font-family: "SUITE", sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
 `;

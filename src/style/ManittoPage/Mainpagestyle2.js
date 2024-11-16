@@ -9,7 +9,7 @@ export const MainBackground = styled.div`
   width: 100vw;
   min-height: 100vh;  
   display: flex;
-  justify-content: center;
+  
   flex-direction: column;
   align-items: center;
 
@@ -52,12 +52,12 @@ export const TitleText3 = styled.h1`
   margin-bottom: 10%;
 `;
 export const EmptyContainer = styled.div`
-   width: 320px;
-   height: 460px;
+  width: 320px;
+  height: 420px;
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
   border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
   border-radius: 8px;
-  margin: 1rem 0;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
  
@@ -95,10 +95,9 @@ export const RowContainer4 = styled.div`
 
 export const RowContainer2 = styled.div`
   display: flex;
-  gap: 37px;
+  gap: 1rem; /* 텍스트 간격 */
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
 `;
 
 export const CenteredImage = styled.img`
@@ -155,13 +154,14 @@ export const SantaContainer = styled.div`
 export const Divider = styled.hr`
   border: none;
   border-top: 1px solid #ccc;
-   
+  margin-top: 5%;
   width: 90%;
   opacity: 0.3;
+
 `;
 
 export const Container = styled.div`
-  width: ${(props) => props.width || '320px'};
+  width: ${(props) => props.width || '318px'};
   height: ${(props) => props.height || '70px'};
   background-color: rgba(255, 253, 253, 0.8); /* 배경색과 투명도 설정 */
   border-radius: 8px;
@@ -171,7 +171,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 1rem;
   box-sizing: border-box;
-  margin-top: 10%; /* 숫자일 경우 px 추가 */
+  margin: ${(props) => (typeof props.margin === 'number' ? `${props.margin}px` : props.margin || '0')};
 `;
 
 // 텍스트 스타일 (윗줄, 아랫줄 동일 스타일)
@@ -385,7 +385,7 @@ export const EmptyContaine2 = styled.div`
   width: 103px;
   height: 75;
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
-  border: 2px solid rgba(204, 204, 204, 0.3); /* 반투명한 테두리 */
+  border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
   display: flex;              /* 플렉스 박스 설정 */
   flex-direction: column;     /* 자식 요소를 세로로 정렬 */
   justify-content: center;    /* 수직 중앙 정렬 */

@@ -15,11 +15,11 @@ export const MainBackground = styled.div`
 `;
  
 export const TitleText = styled.h1`
-  font-family: "SUITE", sans-serif;
+   font-family: "SUITE", sans-serif;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 12px;
   color: white;
-  
+  margin: ${(props) => props.margin || '0'};
 `;
 
 
