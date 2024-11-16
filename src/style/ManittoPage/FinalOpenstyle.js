@@ -8,7 +8,7 @@ export const MainContainer = styled.div`
   width: 100vw;
   min-height: 100vh;  
   display: flex;
-  justify-content: center;
+ 
   flex-direction: column;
   align-items: center;
 
@@ -19,7 +19,7 @@ export const EmptyContainer = styled.div`
   width: 320px;
   height: 530px;
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
-  border: 2px solid rgba(204, 204, 204, 0.); /* 반투명한 테두리 */
+  border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
   border-radius: 8px;
   margin: 1rem 0;
   display: flex;
@@ -41,9 +41,9 @@ export const WhiteContainer = styled.div`
 export const RowContainer = styled.div`
   display: flex;
   gap: 1rem; /* 텍스트 간격 */
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  margin-left: auto;
+ margin-top: 10%;
+  margin-right: 5%;
 `;
 export const TitleText = styled.h1`
   font-family: "SUITE", sans-serif;
@@ -110,3 +110,9 @@ export const Text = styled.p`
   margin: 0.2rem 0;
 `;
 
+export const CenteredImage = styled.img`
+  width:  30px; /* 필요한 크기로 조정 */
+  height: 30px;
+   
+  
+`;
