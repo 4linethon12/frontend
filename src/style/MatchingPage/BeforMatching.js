@@ -11,7 +11,7 @@ export const MainBackground = styled.div`
     
   );
   display: flex;
-  justify-content: center;
+  
   flex-direction: column;
   align-items: center;
    
@@ -67,6 +67,7 @@ export const RowContainer = styled.div`
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Divider = styled.hr`
@@ -83,17 +84,19 @@ export const RightImage = styled.img`
   width:  30px; /* 필요한 크기로 조정 */
   height: 30px;
    margin-left: auto;
-  
+   margin-right: 5%;
+   margin-top: 3%;
 `;
 
 export const highContainer = styled.div`
-  width: 375px;
+   width: 100%;
   height: 50px;
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
   border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
   border-radius: 8px;
-  margin: 1rem 0;
-  display: flex;
+
+  display: flex;  
   flex-direction: column;
+  
   
 `;

@@ -14,17 +14,17 @@ import { setMission, setCode } from '../../redux/userSlice';
 const MakeMissionPage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [localMission, setLocalMission] = useState(''); // 로컬 상태로 관리
-    const groupName = useSelector((state) => state.user.groupName); // 그룹명도 Redux에서 가져오고 있다면
+  
     const mission = useSelector((state) => state.user.mission); // Redux 상태에서 미션 가져오기
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const storedMission = localStorage.getItem('mission') || ''; 
-        setLocalMission(mission || storedMission); // Redux mission 값이 우선
-    }, [mission]);
-    
-    const nickname = localStorage.getItem('nickname');
+
+        const storedMission = localStorage.getItem('mission') || '';
+        setLocalMission(storedMission); // localStorage에서 미션을 가져와서 상태 초기화
+    }, []);
+
+    const groupName = localStorage.getItem('groupName');
 
     const handleMissionChange = (event) => {
         const newMission = event.target.value;
@@ -42,7 +42,7 @@ const MakeMissionPage = () => {
     const handleCreateRequest = async () => {
         try {
             const currentMission = mission || localStorage.getItem('mission');
-            const { code } = await createGroupWithMission(nickname, currentMission);
+            const { code } = await createGroupWithMission(groupName, currentMission);
             dispatch(setCode(code));
             navigate('/GroupComplete');
         } catch (error) {
@@ -58,7 +58,7 @@ const MakeMissionPage = () => {
     };
 
     const handleClickBack = () => navigate('/MakeGroup');
-    const handleClickClose = () => navigate('/MainPage');
+    const handleClickClose = () => navigate('/MainPage2');
 
     // 버튼 활성화 조건 수정
     const isButtonActive = localMission.trim().length > 0 && localMission.trim().length <= 16;

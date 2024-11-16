@@ -79,7 +79,7 @@ const BeforeMatching = () => {
     <style.MainBackground>
       <style.highContainer>
         <style.RightImage src={chervon} alt="chervon"
-         onClick={() => navigate('/MainPage')} 
+         onClick={() => navigate('/Mainpage2')} 
         
         ></style.RightImage>
         </style.highContainer>
@@ -100,7 +100,7 @@ const BeforeMatching = () => {
             />
           ))}
         </style.RowContainer>
-        <Button onClick={handleCreateMatches} marginTop="60%">
+        <Button onClick={handleCreateMatches} marginTop="80%">
           마니또 랜덤 매칭하기
         </Button>
         {/* 매칭 ID를 WriteHintPages로 전달 */}
