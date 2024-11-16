@@ -108,7 +108,7 @@ const MakeMissionPage = () => {
                 <style.TitleText5>
                     미션은 최대 16자리까지 입력 가능해요{' '}
                     <span>
-                        ({localMission.length}/16)
+                        ({mission.length}/16)
                     </span>
                 </style.TitleText5>
 
