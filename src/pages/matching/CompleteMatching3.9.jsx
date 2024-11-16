@@ -8,7 +8,7 @@ const GroupCompletePage = () => {
   const navigate = useNavigate(); // navigate 훅 사용
   const handleClick = () => {
     // 버튼 클릭 시 수행할 동작을 정의하세요
-    navigate('/Mainpage2');
+    navigate('/Mainpage3');
   };
 
   return (

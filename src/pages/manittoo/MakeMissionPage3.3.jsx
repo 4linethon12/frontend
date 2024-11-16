@@ -63,7 +63,8 @@ const MakeMissionPage = () => {
     const handleClickClose = () => navigate('/MainPage2');
 
     // 버튼 활성화 조건 수정
-    const isButtonActive = localMission.trim().length > 0 && localMission.trim().length <= 16;
+    const isButtonActive = localMission.trim().length > 0 && localMission.trim().length <= 16 && mission.trim().length > 0 && mission.trim().length <= 16;
+
 
     return (
         <styles.MainBackground>
@@ -101,14 +102,14 @@ const MakeMissionPage = () => {
 
                 <Input
                     placeholder="미션 입력"
-                    value={localMission} // 로컬 상태와 연결
+                    value={mission} // 로컬 상태와 연결
                     onChange={handleMissionChange}
                     maxLength={16} // 최대 16글자 제한
                 />
                 <style.TitleText5>
                     미션은 최대 16자리까지 입력 가능해요{' '}
                     <span>
-                        ({localMission.length}/16)
+                        ({mission.length}/16)
                     </span>
                 </style.TitleText5>
 
