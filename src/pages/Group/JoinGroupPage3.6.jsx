@@ -64,11 +64,6 @@ const JoinGroupPage = () => {
                     style={{ cursor: 'pointer' }}  
                 />
             </style.CancelContainer>
-            <style.ProgressContainer>
-                <style.ProgressBarContainer>
-                    <style.ProgressBarFill style={{ width: '50%' }} />
-                </style.ProgressBarContainer>
-            </style.ProgressContainer>
             </style.highContainer>
             
 
