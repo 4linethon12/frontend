@@ -63,7 +63,8 @@ const MakeMissionPage = () => {
     const handleClickClose = () => navigate('/MainPage2');
 
     // 버튼 활성화 조건 수정
-    const isButtonActive = localMission.trim().length > 0 && localMission.trim().length <= 16;
+    const isButtonActive = localMission.trim().length > 0 && localMission.trim().length <= 16 && mission.trim().length > 0 && mission.trim().length <= 16;
+
 
     return (
         <styles.MainBackground>
