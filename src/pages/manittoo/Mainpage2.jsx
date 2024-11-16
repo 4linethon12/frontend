@@ -88,11 +88,11 @@ const Mainpage2 = () => {
             }
   
             // 마니또 매칭이 완료된 경우
-            navigate('/Mainpage2');
+            navigate('/Mainpage3');
             return;
           } else {
             // 그룹은 생성되었으나 매칭이 안 된 경우
-            navigate('/Mainpage1');
+            navigate('/Mainpage');
             return;
           }
         } else {
