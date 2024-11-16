@@ -42,8 +42,16 @@ export const RowContainer = styled.div`
   display: flex;
   gap: 1rem; /* 텍스트 간격 */
   margin-left: auto;
- margin-top: 10%;
+  margin-top: 5%;
   margin-right: 5%;
+`;
+
+export const RowContainer2 = styled.div`
+  display: flex;
+  gap: 1rem; /* 텍스트 간격 */
+   justify-content: center;
+   align-items: center;
+   margin-top: 5%;
 `;
 export const TitleText = styled.h1`
   font-family: "SUITE", sans-serif;
@@ -101,7 +109,7 @@ export const MiniImage = styled.img`
  width: 15px; /* 원하는 크기로 설정 */
  height: 15px;
   background-color: rgba(133, 147, 232, 0.5);
-  margin-top: 10px;
+ 
 `;
 export const Text = styled.p`
   font-family: 'SUITE', sans-serif;
