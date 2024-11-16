@@ -161,7 +161,7 @@ const Mainpage2 = () => {
         <styles.Container onClick={goToTest}>
           <styles.RowContainer>
             <styles.LeftImage src={BallImage} alt="BallImage" />
-            <styles.Text>친구가 보는 나는 어떤 산타일까?!{"\n"}궁금하다면 클릭! 🎄✨</styles.Text>
+            <styles.Text>산타가 보는 나는 어떤 성격일까?!{"\n"}궁금하다면 클릭! 🎄✨</styles.Text>
             <styles.RightImage src={RightImage} alt='RightImage' />
           </styles.RowContainer>
         </styles.Container>
@@ -173,7 +173,7 @@ const Mainpage2 = () => {
           </styles.MiniContainer>
         </styles.RowContainer>
 
-        <styles.RowContainer2>
+        <styles.RowContainer>
           <StyledContainer 
             width="140px" 
             height="125px" 
@@ -190,7 +190,7 @@ const Mainpage2 = () => {
             imageSrc={Santaman}
             onClick={() => handleNavigate('/JoinGroupPage')} 
           />
-        </styles.RowContainer2>
+        </styles.RowContainer>
       </styles.EmptyContainer>
 
       <styles.Divider />

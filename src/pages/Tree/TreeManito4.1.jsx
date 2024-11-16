@@ -6,10 +6,11 @@ import * as style from '../../style/TreePage/TreeMinatostyle';
 import treeImage from '/images/Tree.png';
 import LogoImage from '/images/mainpage/Sub.png';
 import hintImage1 from '/images/treegift/1.png';
-import hintImage2 from '/images/treegift/2.png';
-import hintImage3 from '/images/treegift/3.png';
-import hintImage4 from '/images/treegift/4.png';
-import LetterImage5 from '/images/treegift/5.png'; // 레터 이미지 추가
+import hintImage2 from '/images/treegift/3.png';
+import hintImage3 from '/images/treegift/4.png';
+import hintImage4 from '/images/treegift/2.png';
+import hintImage5 from '/images/treegift/5.png';
+// import LetterImage5 from '/images/treegift/5.png'; // 레터 이미지 추가
 import axios from 'axios';
 
 const TreeManito = () => {
@@ -61,10 +62,11 @@ const TreeManito = () => {
 
     fetchHints();
   }, [token, groupId]);
+  
 
   // 힌트에 사용할 이미지와 텍스트 매핑
-  const hintImages = [hintImage1, hintImage2, hintImage3, hintImage4];
-  const hintTexts = ['1st 힌트', '2nd 힌트', '3rd 힌트', 'Last 힌트'];
+  // const hintImages = [hintImage1, hintImage2, hintImage3, hintImage4];
+  // const hintTexts = ['1st 힌트', '2nd 힌트', '3rd 힌트', 'Last 힌트'];
 
   return (
     <style.MainContainer>
@@ -84,52 +86,27 @@ const TreeManito = () => {
           <style.BadgeText>💌 1일 뒤 마니또의 힌트가 공개돼요!</style.BadgeText>
         </style.BadgeContainer>
       </style.EmptyContainer>
+
       <style.TreeContainer>
-        <style.CenteredImage src={treeImage} alt="Tree Image" />
-        {hints.map((hint, index) => {
-          if (index >= hintImages.length && index !== 4) {
-            console.warn('힌트 이미지 배열보다 많은 힌트가 있습니다. 추가 이미지 필요.');
-            return null; // 초과 힌트는 렌더링하지 않음
-          }
-
-          if (index === 4) {
-            // 5번째 힌트는 레터 처리
-            return (
-              <style.HintContainer
-                key="letter"
-                top="70%" // 적절한 위치
-                left="50%"
-                onClick={() => navigate('/Letter')}
-                style={{ cursor: 'pointer' }}
-              >
-                <img src={LetterImage5} alt="Letter" style={{ width: '50px', height: '50px' }} />
-                <style.TitleText4>레터</style.TitleText4>
-              </style.HintContainer>
-            );
-          }
-
-          const HintStyle = style[`hint_${index + 1}`]; // 동적 스타일
-          return (
-            <style.HintContainer
-              key={hint.id}
-              top={`${20 + index * 15}%`} // 각 힌트 위치 동적 설정
-              left={`${30 + index * 10}%`}
-              onClick={() =>
-                navigate('/HintCheck', {
-                  state: { hintText: hint.hint, hintIndex: index + 1 },
-                })
-              }
-              style={{ cursor: 'pointer' }}
-            >
-              <HintStyle
-                src={hintImages[index]} // ID 순서대로 이미지를 매핑
-                alt={`Hint ${index + 1}`}
-              />
-              <style.TitleText4>{hintTexts[index]}</style.TitleText4>
-            </style.HintContainer>
-          );
-        })}
-      </style.TreeContainer>
+  <style.CenteredImage src={treeImage} alt="Tree Image" />
+  {hints.map((hint, index) => (
+    <style.CenteredImage2
+      key={hint.id}
+      onClick={() =>
+        navigate('/HintCheck', {
+          state: { hintText: hint.hint, hintIndex: index + 1 },
+        })
+      }
+    >
+      <style.HintText>{`${index + 1}st 힌트`}</style.HintText>
+      {index === 0 && <style.hint_1 src={hintImage1} alt="힌트 1" />}
+      {index === 1 && <style.hint_2 src={hintImage2} alt="힌트 2" />}
+      {index === 2 && <style.hint_3 src={hintImage3} alt="힌트 3" />}
+      {index === 3 && <style.hint_4 src={hintImage4} alt="힌트 4" />}
+      {index === 4 && <style.hint_5 src={hintImage5} alt="힌트 5" />}
+    </style.CenteredImage2>
+  ))}
+</style.TreeContainer>
     </style.MainContainer>
   );
 };

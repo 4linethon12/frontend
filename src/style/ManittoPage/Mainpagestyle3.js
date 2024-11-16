@@ -9,14 +9,14 @@ export const MainBackground = styled.div`
   width: 100vw;
   min-height: 100vh;  
   display: flex;
-  justify-content: center;
+  
   flex-direction: column;
   align-items: center;
 
 `;
  
 export const TitleText = styled.h1`
-  font-family: "SUITE", sans-serif;
+ font-family: "SUITE", sans-serif;
   font-weight: 500;
   font-size: 12px;
   color: white;
@@ -52,12 +52,12 @@ export const TitleText3 = styled.h1`
   margin-bottom: 10%;
 `;
 export const EmptyContainer = styled.div`
-  width: 320px;
-  height: 380px;
+ width: 320px;
+  height: 420px;
   background-color: rgba(255, 255, 255, 0.0); /* 반투명한 배경색 */
   border: 2px solid rgba(204, 204, 204, 0.0); /* 반투명한 테두리 */
   border-radius: 8px;
-  margin: 1rem 0;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
  
@@ -86,13 +86,17 @@ export const MiniContainer = styled.div`
  
 `;
 
+
 export const RowContainer = styled.div`
-  display: flex;
-  gap: 15px;
+   display: flex;
+  gap: 1rem; /* 텍스트 간격 */
   justify-content: center;
   align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  justify-content: space-between;
  
-`; 
+`;
 
 export const BadgeContainer4 = styled.div`
   width: 60px;
@@ -116,16 +120,15 @@ export const BadgeText4 = styled.div`
 
 export const RowContainer2 = styled.div`
   display: flex;
-  gap: 37px;
+  gap: 1rem; /* 텍스트 간격 */
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
 `;
 
 export const CenteredImage = styled.img`
-  width: 170px; /* 필요한 크기로 조정 */
-  height: 40px;
-  
+  width: 190px; /* 필요한 크기로 조정 */
+  height: 60px;
+  margin-left: -8%;
  
 `;
  
@@ -171,15 +174,21 @@ export const SantaContainer = styled.div`
 `;
 
 export const Divider = styled.hr`
-  border: none;
+   border: none;
   border-top: 1px solid #ccc;
-   
+  margin-top: 5%;
   width: 90%;
   opacity: 0.3;
 `;
+export const Divider2 = styled.hr`
+ 
+  width: 90%;
+  opacity: 0.3;
+  background-color: #CFD3D5;;
+`;
 
 export const Container = styled.div`
-  width: ${(props) => props.width || '320px'};
+  width: ${(props) => props.width || '318px'};
   height: ${(props) => props.height || '70px'};
   background-color: rgba(255, 253, 253, 0.8); /* 배경색과 투명도 설정 */
   border-radius: 8px;
@@ -189,12 +198,12 @@ export const Container = styled.div`
   align-items: center;
   padding: 1rem;
   box-sizing: border-box;
-  margin-top: 10%; /* 숫자일 경우 px 추가 */
+ 
 `;
 
 // 텍스트 스타일 (윗줄, 아랫줄 동일 스타일)
 export const Text = styled.p`
-  font-family: 'SUITE', sans-serif;
+font-family: 'SUITE', sans-serif;
   font-size: 13px;
   color: #000;
   margin: 0.2rem 0;
@@ -365,6 +374,8 @@ export const RowContainer4 = styled.div`
   flex-direction: column; /* 이름과 이미지를 세로로 배치 */
   margin-left: 10%;
   margin-right: 15px; /* 텍스트와의 간격 조정 */
+ 
+ 
 `;
 
 export const LogoImage = styled.img`
@@ -376,7 +387,7 @@ export const LogoImage = styled.img`
 
 export const RowContainerText = styled.div`
   font-family: 'SUITE', sans-serif;
-  font-size: 12px; /* 글자 크기 */
+  font-size: 14px; /* 글자 크기 */
   font-weight: 600;
   color: #184E40; /* 글자 색상 */
   text-align: center;
@@ -389,12 +400,12 @@ export const RowContainer5 = styled.div`
  margin-left: 5%;
   width: 100%; /* 박스가 남은 공간을 차지하도록 설정 */
   height: 100%; /* 부모 요소 높이에 맞추기 */
-  
+  margin-top: 10%;
 `;
 
 export const BadgeContainer3 = styled.div`
   width: 177px;
-  height: 93px;
+  height: 75px;
   background: rgba(255, 253, 253, 0.8); /* 반투명 배경 */
   border-radius: 10px; /* 둥근 모서리 */
   margin-top: 8px; /* 상단 여백 */
@@ -407,7 +418,7 @@ export const BadgeContainer3 = styled.div`
 
 export const RowContainerText3 = styled.div`
   font-family: 'SUITE', sans-serif;
-  font-size: 12px; /* "MISSION" 텍스트 크기 */
+  font-size: 10px; /* "MISSION" 텍스트 크기 */
   font-weight: 600;
   color: #254434; /* 텍스트 색상 */
   margin-bottom: 5px; /* 아래 텍스트와 간격 추가 */
@@ -415,7 +426,7 @@ export const RowContainerText3 = styled.div`
 
 export const RowContainerText2 = styled.div`
   font-family: 'SUITE', sans-serif;
-   
+   margin-left: 15%;
   font-weight: 400;
   color: #254434; /* 텍스트 색상 */
    
@@ -423,5 +434,18 @@ export const RowContainerText2 = styled.div`
   white-space: nowrap; /* 한 줄로 표시 */
  
   font-size: 11px; /* 미션 내용 텍스트 크기 */
-margin-top: 3px; /* "MISSION" 텍스트와 간격 */
+ 
+`;
+
+export const RowContainerText0 = styled.div`
+  font-family: 'SUITE', sans-serif;
+    
+  font-weight: 400;
+  color: #254434; /* 텍스트 색상 */
+   
+  text-overflow: ellipsis; /* 텍스트가 넘칠 경우 말줄임 처리 */
+  white-space: nowrap; /* 한 줄로 표시 */
+ 
+  font-size: 11px; /* 미션 내용 텍스트 크기 */
+ 
 `;

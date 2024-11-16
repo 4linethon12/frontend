@@ -1,7 +1,10 @@
  import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/User/LoginPage'
-import Mainpage from '../pages/manittoo/Mainpage3.1';
+import Mainpage0 from '../pages/manittoo/Mainpage0';
+import Mainpage from '../pages/manittoo/Mainpage';
+import Mainpage2 from '../pages/manittoo/Mainpage2';
+import Mainpage3 from '../pages/manittoo/Mainpage3';
 import MakeGroup from '../pages/manittoo/MakeGroupPage3.2';
 import MakeMission from '../pages/manittoo/MakeMissionPage3.3';
 import GroupCOmplete from '../pages/Group/GroupCompletePage3.4'
@@ -15,8 +18,8 @@ import Letter from '../pages/Tree/Letter4.3';
 import Letterwirte   from '../pages/Tree/Letterwirte';
 import BeforeTree from '../pages/Tree/BeforeTree4.4';
 import WriteHintPages from '../pages/Tree/WriteHint4.5';
-import Mainpage2 from '../pages/manittoo/Mainpage3.1.1';
-import Mainpage1 from '../pages/manittoo/Mainpage3.1.1';
+
+ 
 import Join from '../pages/Join/Join';
 import Password from '../pages/Join/Password';
 import JoinDone from '../pages/Join/JoinDone';
@@ -25,10 +28,9 @@ import TestMain from '../pages/Test/TestMain';
 import TestResult from '../pages/Test/TestResult';
 import Enter from '../pages/User/Enter'
 import TestLoding from '../pages/Test/TestLoding';
-import Mainpage0 from '../pages/manittoo/Mainpage3.1.0';
-import Mainpage3 from '../pages/manittoo/Mainpage3.1.1.2';
+
 import HintCheck from '../pages/Tree/HintCheck';
-import LetterWrite  from '../pages/Tree/Letterwirte';
+ 
  
 import Tutorial from '../pages/User/Tutorial';
 
@@ -43,9 +45,13 @@ function AppRouter() {
  
         
          <Route path="/LoginPage" element={<LoginPage />} />
-         <Route path="/Mainpage1" element={<Mainpage1 />} />
+         
         <Route path="/HomePage" element={<HomePage />} />
+        <Route path="/Mainpage0" element={<Mainpage0 />} />
         <Route path="/MainPage" element={<Mainpage />} />
+        <Route path="/Mainpage2" element={<Mainpage2 />} />
+        <Route path="/Mainpage3" element={<Mainpage3 />} />
+     
         <Route path="/MakeGroup" element={<MakeGroup />} />
         <Route path="/MakeMission" element={<MakeMission />} />
         <Route path="/GroupCOmplete" element={<GroupCOmplete />} />
@@ -53,7 +59,7 @@ function AppRouter() {
         <Route path="/BeforeMatching" element={<BeforeMatching />} />
         <Route path="/ProcessMatching" element={<ProcessMatching />} />
         <Route path="/CompleteMatching" element={<CompleteMatching />} />
-        <Route path="/Mainpage0" element={<Mainpage0 />} />
+       
         <Route path="/Tutorial" element={<Tutorial />} />
        
         <Route path="/FinalOpenPage" element={<FinalOpenPage />} />
@@ -62,8 +68,7 @@ function AppRouter() {
         <Route path="/Letterwirte" element={<Letterwirte />} />
         <Route path="/BeforeTree" element={<BeforeTree />} />
         <Route path="/WriteHintPages" element={<WriteHintPages />} />
-        <Route path="/Mainpage2" element={<Mainpage2 />} />
-        <Route path="/Mainpage3" element={<Mainpage3 />} />
+       
         <Route path="/Join" element={<Join />} />
    
         <Route path="/password" element={<Password />} />
@@ -74,7 +79,8 @@ function AppRouter() {
         <Route path="/testresult" element={<TestResult />} />
         <Route path="/loading" element={<TestLoding />} />
         <Route path="/HintCheck" element={<HintCheck />} />
-        <Route path="/LetterWrite" element={<LetterWrite />} />
+        
+
       </Routes>
     </Router>
   );

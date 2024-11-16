@@ -42,9 +42,14 @@ const BeforeTree = () => {
     navigate('/TreeManito'); // 버튼 클릭 시 TreeManito로 이동
   };
 
-  // 힌트에 사용할 이미지와 텍스트 맵핑
+  // 힌트에 사용할 이미지와 스타일 컴포넌트 맵핑
   const hintImages = [hintImage1, hintImage2, hintImage3, hintImage4];
-  const hintTexts = ['1st 힌트', '2nd 힌트', '3rd 힌트', 'Last 힌트'];
+  const hintStyles = [
+    style.CenteredImage2,
+    style.CenteredImage3,
+    style.CenteredImage4,
+    style.CenteredImage5,
+  ];
 
   return (
     <style.MainContainer>
@@ -63,25 +68,18 @@ const BeforeTree = () => {
         <style.TreeContainer>
           <style.CenteredImage src={treeImage} alt="Tree Image" />
           {hints.map((hint, index) => {
-            // ID 순서에 맞는 스타일 적용
-            const HintStyle = style[`hint_${index + 1}`];
-            if (!HintStyle) {
-              console.error(`style.hint_${index + 1}가 정의되지 않았습니다.`);
-              return null; // 정의되지 않은 경우 렌더링하지 않음
-            }
+            // 힌트 스타일과 이미지를 동적으로 렌더링
+            const HintStyle = hintStyles[index];
+            if (!HintStyle) return null; // 스타일이 정의되지 않은 경우 렌더링하지 않음
+
             return (
-              <style.HintContainer
-                key={hint.id}
-                top={`${20 + index * 15}%`} // 각 힌트 위치 동적 설정
-                left={`${30 + index * 10}%`}
-              >
-                  <style.TitleText4>{hintTexts[index]}</style.TitleText4>
-                <HintStyle
+              <HintStyle key={hint.id}>
+                 <style.HintText>{`${index + 1}번째 힌트`}</style.HintText> {/* 힌트 텍스트 추가 */}
+                <style.hint_1 
                   src={hintImages[index]} // ID 순서대로 이미지를 맵핑
                   alt={`Hint ${index + 1}`}
                 />
-              
-              </style.HintContainer>
+              </HintStyle>
             );
           })}
         </style.TreeContainer>

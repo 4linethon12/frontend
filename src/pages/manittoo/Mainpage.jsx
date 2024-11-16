@@ -64,14 +64,14 @@ const Mainpage = () => {
  
         <styles.CenteredImage src={LogoImage} alt="LogoImage" />
            
-          <styles.TitleText onClick={handleNavigateTree} style={{ cursor: 'pointer' }}>{nickname ? `${nickname}트리 보러가기` : '트리 보러가기'}</styles.TitleText>
+        <styles.TitleText onClick={handleNavigateTree} style={{ cursor: 'pointer' }}>{nickname ? `${nickname} 트리보러가기` : ' 트리보러가기'}</styles.TitleText>
  
         </styles.RowContainer>
 
         <styles.Container onClick={goToTest}>
           <styles.RowContainer>
             <styles.LeftImage src={BallImage} alt="BallImage" />
-            <styles.Text>친구가 보는 나는 어떤 산타일까?!{"\n"}궁금하다면 클릭! 🎄✨</styles.Text>
+            <styles.Text>산타가 보는 나는 어떤 성격일까?!{"\n"}궁금하다면 클릭! 🎄✨</styles.Text>
             <styles.RightImage src={RightImage} alt="RightImage" />
           </styles.RowContainer>
         </styles.Container>
