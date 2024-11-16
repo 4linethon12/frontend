@@ -24,7 +24,7 @@ const Mainpage3 = () => {
   const [loading, setLoading] = useState(true); // 로딩 상태
 
   useEffect(() => {
-    const storedNickname = localStorage.getItem('nickname');
+    const storedNickname = localStorage.getItem('ManitoNickname');
     if (storedNickname) {
       setNickname(storedNickname);
     }
@@ -112,7 +112,7 @@ const Mainpage3 = () => {
  
         <styles.CenteredImage src={LogoImage} alt="LogoImage" />
            
-        <styles.TitleText onClick={handleNavigateTree} style={{ cursor: 'pointer' }}>{nickname ? `${nickname} 트리보러가기` : ' 트리보러가기'}</styles.TitleText>
+        <styles.TitleText onClick={handleNavigateTree}>트리보러가기</styles.TitleText>
  
         </styles.RowContainer>
 
