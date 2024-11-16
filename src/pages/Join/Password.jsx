@@ -93,7 +93,7 @@ const Password = () => {
                 <img src={pwType.visible ? Noneye : Eye} alt="비밀번호 표시" />
               </span>
             ) : (
-              <span className="eye" style={{ position: 'absolute', right: '10px', top: '63%', transform: 'translateY(-50%)' }}>
+              <span className="eye" style={{ position: 'absolute', right: '10px', top: '40px', transform: 'translateY(-50%)' }}>
                 <img src={isValid ? IconCheck : IconX} alt="유효성 아이콘" />
               </span>
             )
