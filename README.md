@@ -72,5 +72,17 @@
 ---
 
  
-## 📄 프로젝트 발표자료
-[발표자료 보기](https://github.com/4linethon12/frontend/blob/develop/src/assets/12%E1%84%90%E1%85%B5%E1%86%B7_1%E1%84%8E%E1%85%A1.pdf?raw=true)
+## 📄 프로젝트 화면 미리보기
+![첫번쨰화면](https://github.com/4linethon12/frontend/blob/develop/src/assets/img/1.png)
+![두번쨰화면](https://github.com/4linethon12/frontend/blob/develop/src/assets/img/2.png)
+![세번쨰화면](https://github.com/4linethon12/frontend/blob/develop/src/assets/img/3.png)
+![네번쨰화면](https://github.com/4linethon12/frontend/blob/develop/src/assets/img/4.png)
+![다번쨰화면](https://github.com/4linethon12/frontend/blob/develop/src/assets/img/5.png)
+![여섯번쨰화면](https://github.com/4linethon12/frontend/blob/develop/src/assets/img/6.png)
+![일곱번쨰화면](https://github.com/4linethon12/frontend/blob/develop/src/assets/img/7.png)
+![여덟번쨰화면](https://github.com/4linethon12/frontend/blob/develop/src/assets/img/8.png)
+![아홉번쨰화면](https://github.com/4linethon12/frontend/blob/develop/src/assets/img/9.png)
+
+
+
+ 
