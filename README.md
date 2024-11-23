@@ -73,5 +73,4 @@
 
  
 ## 프로젝트 발표자료
-
-[📄 발표자료 보기](https://file.notion.so/f/f/9cbe6696-e75f-452c-a708-7024f696de09/e456355b-0a5d-4272-b2f6-cdb19239bf5f/12%E1%84%90%E1%85%B5%E1%86%B7_2%E1%84%8E%E1%85%A1.pdf?table=block&id=c6ec5016-7bb1-4589-8839-4ac18fabe400&spaceId=9cbe6696-e75f-452c-a708-7024f696de09&expirationTimestamp=1732492800000&signature=A223sM8Pu5_PmU8DUAQv1pdHvZYPcfAtGMwJ7NxRFZI&downloadName=12%E1%84%90%E1%85%B5%E1%86%B7_2%E1%84%8E%E1%85%A1.pdf)
+![발표자료](https://github.com/4linethon12/frontend/blob/develop/src/assets/12%E1%84%90%E1%85%B5%E1%86%B7_1%E1%84%8E%E1%85%A1.pdf)
