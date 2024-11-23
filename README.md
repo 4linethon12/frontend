@@ -72,5 +72,5 @@
 ---
 
  
-## 프로젝트 발표자료
-![발표자료](https://github.com/4linethon12/frontend/blob/develop/src/assets/12%E1%84%90%E1%85%B5%E1%86%B7_1%E1%84%8E%E1%85%A1.pdf)
+## 📄 프로젝트 발표자료
+[발표자료 보기](https://github.com/4linethon12/frontend/blob/develop/src/assets/12%E1%84%90%E1%85%B5%E1%86%B7_1%E1%84%8E%E1%85%A1.pdf?raw=true)
