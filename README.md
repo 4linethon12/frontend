@@ -1,6 +1,6 @@
 # 🎄 크리스마또
 
-![크리스마또 로고](seongbeom/splash.png)
+![크리스마또 로고]([seongbeom/splash.png](https://github.com/4linethon12/frontend/blob/seongbeom/splash.png))
 
 크리스마스는 모두에게 특별한 날이지만, 마음을 전하고 싶어도 방법을 몰라, 혹은 부끄러워서 망설인
 적은 없으신가요?
@@ -11,12 +11,12 @@
 
 ## 📊 ERD (Entity Relationship Diagram)
 프로젝트의 데이터베이스 구조를 한눈에 보여줍니다.  
-![ERD 이미지](seongbeom/erd.png)
+![ERD 이미지]([seongbeom/erd.png](https://github.com/4linethon12/frontend/blob/seongbeom/erd.png))
 
 ---
 ## 🎨 프로젝트의 전체적인 디자인
 
-![프로젝트 디자인](seongbeom/design.png)
+![프로젝트 디자인]([seongbeom/design.png](https://github.com/4linethon12/frontend/blob/seongbeom/design.png))
 
 프로젝트의 전체적인 UI/UX 디자인입니다. 크리스마스 분위기를 살린 따뜻하고 직관적인 인터페이스를 구현하여 사용자들이 편리하게 서비스를 이용할 수 있도록 설계되었습니다.
 
@@ -24,7 +24,7 @@
 
 ## 🏗 백엔드 아키텍처
 
-![백엔드 아키텍처](backendArchitecture.png)
+![백엔드 아키텍처]([backendArchitecture.png](https://github.com/4linethon12/frontend/blob/seongbeom/backendArchitecture.png))
 
 프로젝트에서 사용된 백엔드 아키텍처입니다. 안정적인 데이터 관리와 API 통신을 기반으로 사용자 요청을 처리하며, 확장성을 고려한 설계를 채택했습니다.
 
