@@ -1,8 +1,21 @@
-# React + Vite
+# 🎄 크리스마또
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![크리스마또 로고](path/to/your/logo.png)
 
-Currently, two official plugins are available:
+크리스마또는 크리스마스 시즌을 더욱 특별하게 만들어주는 **Secret Santa(마니또)** 프로젝트입니다.  
+친구들과 함께 그룹을 생성하고 미션을 통해 서로를 더 가까이 알아가며 따뜻한 추억을 만들어 보세요! 🎅🎁
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 📚 주요 기능
+- 🎅 **마니또 매칭**: 랜덤으로 마니또를 지정하여 재미를 더합니다.
+- 📋 **미션 수행**: 매일 제공되는 미션으로 특별한 추억 만들기.
+- 🎁 **크리스마스 선물**: 선물을 주고받으며 따뜻한 크리스마스를 완성!
+
+---
+
+## 📦 설치 및 실행
+
+1. 이 저장소를 클론합니다:
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
